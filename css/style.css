@@ -2622,6 +2622,7 @@ html::-webkit-scrollbar-track:hover,
 }
 
 .license-wrapper {
+    font-family: "Oswald-Regular";
     font-weight: 300;
     line-height: 1.5rem;
     border-top: 1px dashed #ccc;
@@ -2634,6 +2635,7 @@ html::-webkit-scrollbar-track:hover,
 }
 
 .license-wrapper a {
+    font-family: "Oswald-Regular";
     color: #f7b053
 }
 
