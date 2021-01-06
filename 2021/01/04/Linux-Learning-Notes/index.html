@@ -28,7 +28,7 @@
 <meta property="og:description" content="Add some aliases for your commands .bashrc is a file that stores the alias of command,its content executed each time the shell is opened.So we can add alias in the file by:1vim $HOME&#x2F;.bashrcThen, for">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-03T19:07:31.000Z">
-<meta property="article:modified_time" content="2021-01-04T05:09:17.996Z">
+<meta property="article:modified_time" content="2021-01-06T03:07:22.126Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="utilities">
 <meta name="twitter:card" content="summary">
@@ -441,6 +441,14 @@ height:50vh;
 <p><code>reboot</code> restarts the system.</p>
 <p>Both of them requires a root authentication.</p>
 </blockquote>
+<h1 id="Pass-Parameters-to-your-shell-script"><a href="#Pass-Parameters-to-your-shell-script" class="headerlink" title="Pass Parameters to your shell script"></a>Pass Parameters to your shell script</h1><blockquote>
+<p>For example, if we wanna edit an existent text, and if the file doesn’t exist, the system shall create one, we can write a script named ‘’edit.sh”” as below:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="variable">$1</span></span><br><span class="line"><span class="keyword">if</span> [ -d /e/blog/<span class="built_in">source</span>/_posts/<span class="variable">$&#123;name&#125;</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$&#123;name&#125;</span> does not exist\n&quot;</span></span><br><span class="line">	hexo new <span class="variable">$&#123;name&#125;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line">vim /e/blog/<span class="built_in">source</span>/_posts/<span class="variable">$&#123;name&#125;</span></span><br></pre></td></tr></table></figure>
+<p>then:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 edit.sh</span><br></pre></td></tr></table></figure>
+<p>So can we call the <code>edit.sh</code> as if using a built-in command.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">edit.sh <span class="string">&quot;FOO&quot;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
 
     </article>
     </br>
@@ -464,7 +472,7 @@ height:50vh;
                             </a>
                             <p>update on：
                                 <a href="http://endsieg77.github.io/2021/01/04/Linux-Learning-Notes/">
-                                    January 4th 2021, 1:09:17 pm
+                                    January 6th 2021, 11:07:22 am
                                 </a>
         </div>
         
@@ -616,7 +624,7 @@ height:50vh;
                                                     <div class="toc-catalog">
                                                         <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                                                     </div>
-                                                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Add-some-aliases-for-your-commands"><span class="toc-number">1.</span> <span class="toc-text">Add some aliases for your commands</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Check-your-unwired-lan-driver"><span class="toc-number">2.</span> <span class="toc-text">Check your unwired lan driver</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Task-management"><span class="toc-number">3.</span> <span class="toc-text">Task management</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#halt-shutdown-reboot"><span class="toc-number">4.</span> <span class="toc-text">halt, shutdown, reboot</span></a></li></ol>
+                                                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Add-some-aliases-for-your-commands"><span class="toc-number">1.</span> <span class="toc-text">Add some aliases for your commands</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Check-your-unwired-lan-driver"><span class="toc-number">2.</span> <span class="toc-text">Check your unwired lan driver</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Task-management"><span class="toc-number">3.</span> <span class="toc-text">Task management</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#halt-shutdown-reboot"><span class="toc-number">4.</span> <span class="toc-text">halt, shutdown, reboot</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pass-Parameters-to-your-shell-script"><span class="toc-number">5.</span> <span class="toc-text">Pass Parameters to your shell script</span></a></li></ol>
                                                 </div>
                                                 
 
