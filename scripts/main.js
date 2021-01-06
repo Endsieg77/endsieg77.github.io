@@ -2667,6 +2667,21 @@
                             tagMeta.changeLabel(_this5.currLabelName);
                         }
                     });
+
+                    document.body.addEventListener('click', function(e) {
+                        if (e.target.className === 'post-category') {
+                            e.stopPropagation();
+
+                            _initSidebar.default.activateSidebar();
+
+                            _initSidebar.default.switchTo(2);
+
+                            var currLabelName = e.target.getAttribute("data-categories");
+                            _this5.currLabelName = currLabelName;
+                            var tagMeta = _this5.metas[0];
+                            tagMeta.changeLabel(_this5.currLabelName);
+                        }
+                    });
                 }
             }]);
 
