@@ -28,7 +28,7 @@
 <meta property="og:description" content="Links: 证明Jensen不等式 一致连续与导数  2021&#x2F;1&#x2F;5 Daily Problem:Problem 1:  \int\sqrt{1+\frac{1}{4x}}\mathrm{d}x\\ Solution:  \int\sqrt{1+\frac{1}{4x}}\mathrm{d}x\\ &#x3D;\frac{1}{2}\int\sqrt{\frac{4x+1}{x}}\mathrm{d">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-04T14:14:15.000Z">
-<meta property="article:modified_time" content="2021-01-05T16:47:06.286Z">
+<meta property="article:modified_time" content="2021-01-06T00:50:42.583Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="Marks">
 <meta name="twitter:card" content="summary">
@@ -457,7 +457,7 @@ height:50vh;
 =>2\cdot{I}=-x\cdot{\cot^2{x}}+\int{\cot^2{x}\mathrm{d}x}
 \\=-x\cdot{\cot^2{x}}+\int{(\csc^2{x}-1)\mathrm{d}x}
 \\=-x\cdot{\cot^2{x}}-\cot{x}-x+C\\
-故：I=-\frac{1}{2}\left(x\cdot{\cot^2{x}}+\cot{x}+x+C\right)\\</script><h1 id="参数方程求导"><a href="#参数方程求导" class="headerlink" title="参数方程求导"></a>参数方程求导</h1><script type="math/tex; mode=display">
+故：I=-\frac{1}{2}\left(x\cdot{\cot^2{x}}+\cot{x}+x\right)+C\\</script><h1 id="参数方程求导"><a href="#参数方程求导" class="headerlink" title="参数方程求导"></a>参数方程求导</h1><script type="math/tex; mode=display">
 有：
 \left\{
     \begin{array}{ll}
@@ -473,7 +473,19 @@ height:50vh;
 {\mathrm{d}t}\cdot\frac{\mathrm{d}t}{\mathrm{d}x}
 =\frac{\mathrm{d}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)}
 {\mathrm{d}t}/\frac{\mathrm{d}x}{\mathrm{d}t}\\
-(须知x, y对t的导数是易得的,在题中x,y对t求导)</script>
+(须知x, y对t的导数是易得的,在题中x,y对t求导)</script><h1 id="2020-1-6-Daily-Problem"><a href="#2020-1-6-Daily-Problem" class="headerlink" title="2020/1/6 Daily Problem:"></a>2020/1/6 Daily Problem:</h1><h2 id="Problem-1-1"><a href="#Problem-1-1" class="headerlink" title="Problem 1:"></a>Problem 1:</h2><blockquote>
+<script type="math/tex; mode=display">
+f(x)在[a,b]连续,(a,b)可导，证明：\exists\xi\in(a,b),s.t.f'(\xi)=\frac{f(\xi)-f(a)}{b-\xi}.</script></blockquote>
+<p>Solution:</p>
+<script type="math/tex; mode=display">
+分析:不妨先令x=\xi，对要证明的式子变形:\\
+f'(x)(b-x)=f(x)-f(a);\\
+即:[f'(x)-f(a)]'(b-x)+(b-x)'[f(x)-f(a)];\\
+不妨构造辅助函数:\\F(x)=[f(x)-f(a)](b-x);\\
+再用Rolle定理,以下证明就十分容易了.\\
+类似的还有，证明:f'(\xi)\pm{g'(\xi)f(\xi)};\\
+构造辅助函数f'(x)e^{\pm{g(x)}};\\
+有时要结合零点存在性定理.</script>
     </article>
     </br>
     </br>
@@ -496,7 +508,7 @@ height:50vh;
                             </a>
                             <p>update on：
                                 <a href="http://endsieg77.github.io/2021/01/04/Proof-of-the-Jensen-Inequation/">
-                                    January 6th 2021, 12:47:06 am
+                                    January 6th 2021, 8:50:42 am
                                 </a>
         </div>
         
@@ -641,7 +653,7 @@ height:50vh;
                                                     <div class="toc-catalog">
                                                         <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                                                     </div>
-                                                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2021-1-5-Daily-Problem"><span class="toc-number">1.</span> <span class="toc-text">2021&#x2F;1&#x2F;5 Daily Problem:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-1"><span class="toc-number">1.1.</span> <span class="toc-text">Problem 1:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-2"><span class="toc-number">1.2.</span> <span class="toc-text">Problem 2:</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E6%B1%82%E5%AF%BC"><span class="toc-number">2.</span> <span class="toc-text">参数方程求导</span></a></li></ol>
+                                                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2021-1-5-Daily-Problem"><span class="toc-number">1.</span> <span class="toc-text">2021&#x2F;1&#x2F;5 Daily Problem:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-1"><span class="toc-number">1.1.</span> <span class="toc-text">Problem 1:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-2"><span class="toc-number">1.2.</span> <span class="toc-text">Problem 2:</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E6%B1%82%E5%AF%BC"><span class="toc-number">2.</span> <span class="toc-text">参数方程求导</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2020-1-6-Daily-Problem"><span class="toc-number">3.</span> <span class="toc-text">2020&#x2F;1&#x2F;6 Daily Problem:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-1-1"><span class="toc-number">3.1.</span> <span class="toc-text">Problem 1:</span></a></li></ol></li></ol>
                                                 </div>
                                                 
 
