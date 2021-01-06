@@ -2161,6 +2161,7 @@ html::-webkit-scrollbar-track:hover,
 }
 
 .abstract-title {
+    font-family: "Oswald-Regular";
     line-height: 2.5rem;
     color: #787878;
     padding-bottom: 0.5rem
@@ -2192,8 +2193,16 @@ html::-webkit-scrollbar-track:hover,
 .post-tag {
     font-size: 1rem;
     position: relative;
-    color: #aaa;
-    margin-left: 0.4rem;
+    color: rgba(255, 134, 64, 0.842);
+    margin-left: 0.2rem;
+    font-weight: lighter
+}
+
+.post-category {
+    font-size: 1rem;
+    position: relative;
+    color: rgb(35, 55, 240);
+    /* margin-left: 0.1rem; */
     font-weight: lighter
 }
 
