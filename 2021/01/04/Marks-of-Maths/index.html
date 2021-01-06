@@ -664,7 +664,7 @@ f(b)-f(a)=\frac{f''(\xi_1)-f''(\xi_2)}{8}(b-a)^2;\\
                                             </div>
                                             <!-- toc -->
                                             
-                                                <div class="toc-wrapper" style=< %- partial( '_partial/intro-height' , {attr: 'top' }) 
+                                                <div class="toc-wrapper" style=< %- partial( '_partial/intro-height' , {attr: 'top' }) %>
                                                     >
                                                     <div class="toc-catalog">
                                                         <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
@@ -1027,6 +1027,11 @@ jsonContent:
                                                                                     
                                                                                         <script src="/scripts/share.js" async></script>
                                                                                         
-                                </body>
+                                <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;
+    i
+    < all.length; ++i) all[i].SourceElement().parentNode.className +=' has-jax' ; }); </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 
 </html>
