@@ -2678,7 +2678,7 @@
 
                             var currLabelName = e.target.getAttribute("data-categories");
                             _this5.currLabelName = currLabelName;
-                            var tagMeta = _this5.metas[0];
+                            var tagMeta = _this5.metas[1];
                             tagMeta.changeLabel(_this5.currLabelName);
                         }
                     });
