@@ -28,7 +28,7 @@
 <meta property="og:description" content="Links: 证明Jensen不等式 一致连续与导数  2021&#x2F;1&#x2F;5 Daily Problem:Problem 1:  \int\sqrt{1+\frac{1}{4x}}\mathrm{d}x\\ Solution:  \int\sqrt{1+\frac{1}{4x}}\mathrm{d}x\\ &#x3D;\frac{1}{2}\int\sqrt{\frac{4x+1}{x}}\mathrm{d">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-04T14:14:15.000Z">
-<meta property="article:modified_time" content="2021-01-06T00:50:42.583Z">
+<meta property="article:modified_time" content="2021-01-06T01:16:25.758Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="Marks">
 <meta name="twitter:card" content="summary">
@@ -485,7 +485,23 @@ f'(x)(b-x)=f(x)-f(a);\\
 再用Rolle定理,以下证明就十分容易了.\\
 类似的还有，证明:f'(\xi)\pm{g'(\xi)f(\xi)};\\
 构造辅助函数f'(x)e^{\pm{g(x)}};\\
-有时要结合零点存在性定理.</script>
+有时要结合零点存在性定理.</script><h2 id="Problem-2-1"><a href="#Problem-2-1" class="headerlink" title="Problem 2:"></a>Problem 2:</h2><blockquote>
+<script type="math/tex; mode=display">
+设f(x)在[a,b]上二阶可导，f'(a)=f'(b)=0.证明：\exists\xi\in(a,b),s.t.
+\frac{4}{(b-a)^2}\left|f(b)-f(a)\right|\le\left|f''(\xi)\right|.</script></blockquote>
+<p>Solution:</p>
+<script type="math/tex; mode=display">
+f(x)在x=a和x=b处的带Lagrange余项的Taylor公式分别为:\\
+f(x)=f(a)+\frac{f''(\xi_1)}{2}(x-a)^2;\\
+f(x)=f(b)+\frac{f''(\xi_2)}{2}(x-b)^2;\\
+故f(\frac{a+b}{2})=f(a)+\frac{f''(\xi_1)}{8}(b-a)^2\\
+=f(b)+\frac{f''(\xi_2)}{8}(b-a)^2;\\
+=>
+f(b)-f(a)=\frac{f''(\xi_1)-f''(\xi_2)}{8}(b-a)^2;\\
+\therefore
+\left|f(b)-f(a)\right|=\left|\frac{f''(\xi_1)-f''(\xi_2)}{8}(b-a)^2\right|
+\le\left|\frac{f''(\xi)}{4}(b-a)^2\right|;\\
+其中：f''(\xi)=\max\{|f''(\xi_1)|,|f''(\xi_2)|\}.</script>
     </article>
     </br>
     </br>
@@ -508,7 +524,7 @@ f'(x)(b-x)=f(x)-f(a);\\
                             </a>
                             <p>update on：
                                 <a href="http://endsieg77.github.io/2021/01/04/Proof-of-the-Jensen-Inequation/">
-                                    January 6th 2021, 8:50:42 am
+                                    January 6th 2021, 9:16:25 am
                                 </a>
         </div>
         
@@ -653,7 +669,7 @@ f'(x)(b-x)=f(x)-f(a);\\
                                                     <div class="toc-catalog">
                                                         <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                                                     </div>
-                                                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2021-1-5-Daily-Problem"><span class="toc-number">1.</span> <span class="toc-text">2021&#x2F;1&#x2F;5 Daily Problem:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-1"><span class="toc-number">1.1.</span> <span class="toc-text">Problem 1:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-2"><span class="toc-number">1.2.</span> <span class="toc-text">Problem 2:</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E6%B1%82%E5%AF%BC"><span class="toc-number">2.</span> <span class="toc-text">参数方程求导</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2020-1-6-Daily-Problem"><span class="toc-number">3.</span> <span class="toc-text">2020&#x2F;1&#x2F;6 Daily Problem:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-1-1"><span class="toc-number">3.1.</span> <span class="toc-text">Problem 1:</span></a></li></ol></li></ol>
+                                                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2021-1-5-Daily-Problem"><span class="toc-number">1.</span> <span class="toc-text">2021&#x2F;1&#x2F;5 Daily Problem:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-1"><span class="toc-number">1.1.</span> <span class="toc-text">Problem 1:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-2"><span class="toc-number">1.2.</span> <span class="toc-text">Problem 2:</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E6%B1%82%E5%AF%BC"><span class="toc-number">2.</span> <span class="toc-text">参数方程求导</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2020-1-6-Daily-Problem"><span class="toc-number">3.</span> <span class="toc-text">2020&#x2F;1&#x2F;6 Daily Problem:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-1-1"><span class="toc-number">3.1.</span> <span class="toc-text">Problem 1:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-2-1"><span class="toc-number">3.2.</span> <span class="toc-text">Problem 2:</span></a></li></ol></li></ol>
                                                 </div>
                                                 
 
