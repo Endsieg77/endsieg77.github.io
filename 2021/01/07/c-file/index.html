@@ -28,7 +28,7 @@
 <meta property="og:description" content="12345678910111213141516171819202122&#x2F;* file I&#x2F;O *&#x2F;size_t fread(void *buffer, size_t size, size_t count, FILE *fstream);size_t fwrite(void *buffer, size_t size, size_t count, FILE *fstream);int feof(FIL">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-07T09:36:18.000Z">
-<meta property="article:modified_time" content="2021-01-07T09:54:30.334Z">
+<meta property="article:modified_time" content="2021-01-07T19:45:40.480Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="ambulance">
 <meta name="twitter:card" content="summary">
@@ -427,7 +427,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* file I/O */</span></span><br><span class="line"><span class="function"><span class="keyword">size_t</span> <span class="title">fread</span><span class="params">(<span class="keyword">void</span> *buffer, <span class="keyword">size_t</span> size, <span class="keyword">size_t</span> count, FILE *fstream)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">size_t</span> <span class="title">fwrite</span><span class="params">(<span class="keyword">void</span> *buffer, <span class="keyword">size_t</span> size, <span class="keyword">size_t</span> count, FILE *fstream)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">feof</span><span class="params">(FILE *fstream)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rewind</span><span class="params">(FILE *fstream)</span></span>; <span class="comment">/* rewind to the BOF */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fseek</span><span class="params">(FILE *fstream, <span class="keyword">long</span> offset, <span class="keyword">int</span> fromwhere)</span></span>;</span><br><span class="line"><span class="comment">/** SEEK_SET(beginning) Macro defined 0</span></span><br><span class="line"><span class="comment"> *  SEEK_CUR(current) Macro defined 1</span></span><br><span class="line"><span class="comment"> *  SEEK_END(end) Macro defined 2</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fclose</span><span class="params">(FILE *fstream)</span></span>; <span class="comment">/* shall be paired with fopen() */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fputc</span><span class="params">(<span class="keyword">char</span> c, FILE *fstream)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fputs</span><span class="params">(<span class="keyword">char</span> *<span class="built_in">string</span>, FILE *fstream)</span></span>;</span><br><span class="line"><span class="comment">/* different with fputc/s, the 1st param of fprintf/scanf is a file pointer */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fprintf</span><span class="params">(FILE *stream, <span class="keyword">const</span> <span class="keyword">char</span> *format, ...)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fscanf</span><span class="params">(FILE *stream, <span class="keyword">const</span> <span class="keyword">char</span> *format, ...)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* sort function included in stdlib.h: */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">qsort</span><span class="params">(<span class="keyword">void</span> *base, <span class="comment">/* Pointer to the array */</span></span></span></span><br><span class="line"><span class="function"><span class="params">           <span class="keyword">size_t</span> num, <span class="comment">/* Length of the array */</span></span></span></span><br><span class="line"><span class="function"><span class="params">           <span class="keyword">size_t</span> width, <span class="comment">/* Size of the elems */</span></span></span></span><br><span class="line"><span class="function"><span class="params">           <span class="keyword">int</span>(__cdecl*compare)(<span class="keyword">const</span> <span class="keyword">void</span>*,<span class="keyword">const</span> <span class="keyword">void</span>*))</span></span>;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* file I/O */</span></span><br><span class="line"><span class="function"><span class="keyword">size_t</span> <span class="title">fread</span><span class="params">(<span class="keyword">void</span> *buffer, <span class="keyword">size_t</span> size, <span class="keyword">size_t</span> count, FILE *fstream)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">size_t</span> <span class="title">fwrite</span><span class="params">(<span class="keyword">void</span> *buffer, <span class="keyword">size_t</span> size, <span class="keyword">size_t</span> count, FILE *fstream)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">feof</span><span class="params">(FILE *fstream)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rewind</span><span class="params">(FILE *fstream)</span></span>; <span class="comment">/* rewind to the BOF */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fseek</span><span class="params">(FILE *fstream, <span class="keyword">long</span> offset, <span class="keyword">int</span> fromwhere)</span></span>;</span><br><span class="line"><span class="comment">/** SEEK_SET(beginning) Macro defined 0</span></span><br><span class="line"><span class="comment"> *  SEEK_CUR(current) Macro defined 1</span></span><br><span class="line"><span class="comment"> *  SEEK_END(end) Macro defined 2</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fclose</span><span class="params">(FILE *fstream)</span></span>; <span class="comment">/* shall be paired with fopen() */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fputc</span><span class="params">(<span class="keyword">char</span> c, FILE *fstream)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fputs</span><span class="params">(<span class="keyword">char</span> *<span class="built_in">string</span>, FILE *fstream)</span></span>;</span><br><span class="line"><span class="comment">/* different from fputc/s, the 1st param of fprintf/scanf is a file pointer */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fprintf</span><span class="params">(FILE *stream, <span class="keyword">const</span> <span class="keyword">char</span> *format, ...)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fscanf</span><span class="params">(FILE *stream, <span class="keyword">const</span> <span class="keyword">char</span> *format, ...)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* sort function included in stdlib.h: */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">qsort</span><span class="params">(<span class="keyword">void</span> *base, <span class="comment">/* Pointer to the array */</span></span></span></span><br><span class="line"><span class="function"><span class="params">           <span class="keyword">size_t</span> num, <span class="comment">/* Length of the array */</span></span></span></span><br><span class="line"><span class="function"><span class="params">           <span class="keyword">size_t</span> width, <span class="comment">/* Size of the elems */</span></span></span></span><br><span class="line"><span class="function"><span class="params">           <span class="keyword">int</span>(__cdecl*compare)(<span class="keyword">const</span> <span class="keyword">void</span>*,<span class="keyword">const</span> <span class="keyword">void</span>*))</span></span>;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -436,12 +436,17 @@ height:50vh;
             <p>Author: <a href="http://endsieg77.github.io">Endsieg77</a>
             <p>Link: <a href="http://endsieg77.github.io/2021/01/07/c-file/">http://endsieg77.github.io/2021/01/07/c-file/</a>
             <p>Post on: <a href="http://endsieg77.github.io/2021/01/07/c-file/">January 7th 2021, 5:36:18 pm</a>
-            <p>Update on: <a href="http://endsieg77.github.io/2021/01/07/c-file/">January 7th 2021, 5:54:30 pm</a>
+            <p>Update on: <a href="http://endsieg77.github.io/2021/01/07/c-file/">January 8th 2021, 3:45:40 am</a>
         </div>
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2021/01/08/functional-foundations/" title= "functional_foundations">
+                    <div class="nextTitle">functional_foundations</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -749,9 +754,22 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 13
+        Total : 14
         </div>
         <!-- search  -->
         
@@ -773,6 +791,11 @@ top:50vh;
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2021/01/08/functional-foundations/" >functional_foundations</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -921,6 +944,8 @@ jsonContent:
         <span class="sidebar-category-name" data-categories="Social-Science"><span class="iconfont-archer">&#xe60a;</span>Social-Science</span>
     
         <span class="sidebar-category-name" data-categories="C"><span class="iconfont-archer">&#xe60a;</span>C</span>
+    
+        <span class="sidebar-category-name" data-categories="functional"><span class="iconfont-archer">&#xe60a;</span>functional</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
