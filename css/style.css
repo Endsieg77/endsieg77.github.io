@@ -570,6 +570,14 @@ li {
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6)
 }
 
+.friend-avatar {
+    display: inline-block;
+    border-radius: 2.5rem;
+    border: #231466 1px solid;
+    width: 24%;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6)
+}
+
 .profile-name {
     font-size: 2rem;
     line-height: 3rem;
@@ -868,15 +876,32 @@ li {
 }
 
 .friends {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    text-align: left
-}
-
-.friends div {
+    display: inline-block;
     font-size: 1.2rem;
     text-align: left;
-    font-weight: bold
+    font-weight: bold;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center
+}
+
+.friends-name {
+    display: inline-block;
+    font-size: 15px;
+    padding: 0.5rem 0;
+    /* font-weight: bold; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center
+}
+
+.friends-name:hover {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center
 }
 
 .friends a {
