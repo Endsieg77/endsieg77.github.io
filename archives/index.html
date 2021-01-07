@@ -375,7 +375,7 @@
                 <span>c_file</span>
         </a>
         <!-- <div class="abstract-content">
-            1234567891011/* file I/O */size_t fread(void *buffer, size_t size, size_t count, FILE *fstream);size_t fwrite(void *buffer, size_t size, size_t count, FILE *fstream);void fputc(char c, FILE *fstream);void fputs(char *string, FILE *fstream);/* sort function included in stdlib.h: */void qsort(void ...
+            123456789101112/* file I/O */size_t fread(void *buffer, size_t size, size_t count, FILE *fstream);size_t fwrite(void *buffer, size_t size, size_t count, FILE *fstream);int feof(FILE *fstream);void fputc(char c, FILE *fstream);void fputs(char *string, FILE *fstream);/* sort function included in st...
         </div> -->
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -1335,6 +1335,11 @@ jsonContent:
                                                                                     </div>
                                                                                     <!-- async load share.js -->
                                                                                     
-                                </body>
+                                <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;
+    i
+    < all.length; ++i) all[i].SourceElement().parentNode.className +=' has-jax' ; }); </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 
 </html>
