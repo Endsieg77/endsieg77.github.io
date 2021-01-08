@@ -2805,7 +2805,7 @@ html::-webkit-scrollbar-track:hover,
 }
 
 .Stick {
-    margin-left: -10px;
+    margin-left: -7px;
     animation: twinkle .8s infinite
 }
 
