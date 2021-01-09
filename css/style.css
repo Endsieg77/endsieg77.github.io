@@ -2251,9 +2251,22 @@ html::-webkit-scrollbar-track:hover,
     font-weight: lighter
 }
 
-.post-tag::before {
-    margin-right: 2px;
-    content: '#'
+.post-category::after {
+    content: '';
+    position: absolute;
+    left: calc((100% - 98%) / 2);
+    bottom: -15%;
+    transition: all 0.15s ease-in;
+    width: 98%;
+    height: 2px;
+    transform: translate(0, 0);
+    background-color: #aaa;
+    opacity: 0
+}
+
+.post-category:hover::after {
+    transform: translate(0, -2px);
+    opacity: 1
 }
 
 .post-tag::after {
@@ -2267,6 +2280,11 @@ html::-webkit-scrollbar-track:hover,
     transform: translate(0, 0);
     background-color: #aaa;
     opacity: 0
+}
+
+.post-tag::before {
+    margin-right: 2px;
+    content: '#'
 }
 
 .post-tag:hover::after {
