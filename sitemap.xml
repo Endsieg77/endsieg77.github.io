@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://endsieg77.github.io/2021/01/12/todos-in-winter-vacation/</loc>
+    
+    <lastmod>2021-01-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://endsieg77.github.io/2021/01/12/Centos-Cpp17-Config/</loc>
     
     <lastmod>2021-01-12</lastmod>
@@ -227,6 +234,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://endsieg77.github.io/tags/todos/</loc>
+    <lastmod>2021-01-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -322,6 +336,13 @@
   
   <url>
     <loc>http://endsieg77.github.io/categories/Centos7/</loc>
+    <lastmod>2021-01-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://endsieg77.github.io/categories/study/</loc>
     <lastmod>2021-01-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
