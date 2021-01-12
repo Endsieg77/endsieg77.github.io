@@ -20,18 +20,23 @@
     <meta name="keywords" content="Offensive77,巢腾的个人博客,巢腾">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Endsieg77&#39;s Studio">
-<meta property="og:url" content="http://endsieg77.github.io/categories/Matlab/index.html">
+    <meta name="description" content="gcc: error: unrecognized command line option ‘-std&#x3D;c++17’解决方案：升级g++, gcc 输入以下命令: 1234567891011121314151617181920212223cd &#x2F;usr&#x2F;local&#x2F;src# 下载gcc5.2.0源码wget http:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;gcc&#x2F;gcc-5.2.0&#x2F;gcc-5.2.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos Cpp17 Config">
+<meta property="og:url" content="http://endsieg77.github.io/2021/01/12/Centos-Cpp17-Config/index.html">
 <meta property="og:site_name" content="Endsieg77&#39;s Studio">
+<meta property="og:description" content="gcc: error: unrecognized command line option ‘-std&#x3D;c++17’解决方案：升级g++, gcc 输入以下命令: 1234567891011121314151617181920212223cd &#x2F;usr&#x2F;local&#x2F;src# 下载gcc5.2.0源码wget http:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;gcc&#x2F;gcc-5.2.0&#x2F;gcc-5.2.0">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-12T06:08:53.000Z">
+<meta property="article:modified_time" content="2021-01-12T06:20:53.335Z">
 <meta property="article:author" content="Endsieg77">
-<meta property="article:tag" content="Endsieg77">
+<meta property="article:tag" content="utilities">
+<meta property="article:tag" content="remedies">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>Endsieg77&#39;s Studio</title>
+    <title>Centos Cpp17 Config · Endsieg77&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -230,6 +235,8 @@
 <meta name="generator" content="Hexo 5.3.0"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
@@ -253,6 +260,15 @@
     </ul>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Endsieg77&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Centos Cpp17 Config</a>
+            </div>
+    </div>
+    
     <a class="home-link" href=/>Endsieg77's Studio.</a>
 </header>
     <div class="wrapper">
@@ -263,24 +279,78 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Centos Cpp17 Config
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-categories >
+    
+        <a class="post-category" href="javascript:void(0);" data-categories="Centos7">Centos7</a>
+    
+</div>
+                
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "utilities">utilities</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "remedies">remedies</a>
+    
+</div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2021/01/12</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -381,99 +451,92 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/12/31/matlab-1/" >
-            
-                <span>matlab 1</span>
-        </a>
-        <!-- <div class="abstract-content">
-            %: notes%% %%: build a section.
-
-rem(): get remainder.
-
-1234567891011switch input_numcase constant1    statement1case constant2    statement2...case constant_n    statement_notherwise    statement_defaultend
-
-prod(vector): yields vector[1]*…*vector[n]
-
-        </div> -->
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "utilities">utilities</a>
-    
-</div>
-            
-            <div class= abstract-tags >
-    
-        <a class="post-category" href="javascript:void(0);" data-categories="Matlab">Matlab</a>
-    
-</div>
-            
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="gcc-error-unrecognized-command-line-option-‘-std-c-17’"><a href="#gcc-error-unrecognized-command-line-option-‘-std-c-17’" class="headerlink" title="gcc: error: unrecognized command line option ‘-std=c++17’"></a>gcc: error: unrecognized command line option ‘-std=c++17’</h1><h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>升级g++, gcc</p>
+<p>输入以下命令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/src</span><br><span class="line"><span class="comment"># 下载gcc5.2.0源码</span></span><br><span class="line">wget http://ftp.gnu.org/gnu/gcc/gcc-5.2.0/gcc-5.2.0.tar.bz2</span><br><span class="line">tar -jxvf gcc-5.2.0.tar.bz2</span><br><span class="line"><span class="comment"># 进入gcc目录安装</span></span><br><span class="line"><span class="built_in">cd</span> gcc-5.2.0</span><br><span class="line"><span class="comment"># 下载某些依赖包</span></span><br><span class="line">./contrib/download_prerequisites</span><br><span class="line"><span class="comment"># 创建bulid文件夹</span></span><br><span class="line">mkdir build</span><br><span class="line"><span class="built_in">cd</span> build</span><br><span class="line">../configure --prefix=/usr/<span class="built_in">local</span>/gcc --enable-languages=c,c++ --disable-multilib</span><br><span class="line"><span class="comment"># 编译安装,此过程耗时较长</span></span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"><span class="comment"># 修改软连接</span></span><br><span class="line">mv /usr/bin/gcc /usr/bin/gcc_bak</span><br><span class="line">ln -s /usr/<span class="built_in">local</span>/gcc/bin/gcc /usr/bin/gcc</span><br><span class="line">mv /usr/bin/g++ /usr/bin/g++_bak</span><br><span class="line">ln -s /usr/<span class="built_in">local</span>/gcc/bin/g++ /usr/bin/g++</span><br><span class="line"><span class="comment"># 查看升级后版本</span></span><br><span class="line">gcc --verson</span><br><span class="line">g++ --version</span><br><span class="line"><span class="comment">#参考: https://blog.csdn.net/qq_42189083/article/details/109612289</span></span><br></pre></td></tr></table></figure>
+<h2 id="后续问题：’GLIBCXX-3-4-21’-not-found"><a href="#后续问题：’GLIBCXX-3-4-21’-not-found" class="headerlink" title="后续问题：’GLIBCXX_3.4.21’ not found"></a>后续问题：’GLIBCXX_3.4.21’ not found</h2><blockquote>
+<p>参考: <a target="_blank" rel="noopener" href="https://itbilu.com/linux/management/NymXRUieg.html">https://itbilu.com/linux/management/NymXRUieg.html</a></p>
+</blockquote>
+<h3 id="检查动态库"><a href="#检查动态库" class="headerlink" title="检查动态库"></a>检查动态库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings /usr/lib64/libstdc++.so.6 | grep GLIBC</span><br></pre></td></tr></table></figure>
+<p>输出结果:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">GLIBCXX_3.4</span><br><span class="line">GLIBCXX_3.4.1</span><br><span class="line">GLIBCXX_3.4.2</span><br><span class="line">GLIBCXX_3.4.3</span><br><span class="line">GLIBCXX_3.4.4</span><br><span class="line">GLIBCXX_3.4.5</span><br><span class="line">GLIBCXX_3.4.6</span><br><span class="line">GLIBCXX_3.4.7</span><br><span class="line">GLIBCXX_3.4.8</span><br><span class="line">GLIBCXX_3.4.9</span><br><span class="line">GLIBCXX_3.4.10</span><br><span class="line">GLIBCXX_3.4.11</span><br><span class="line">GLIBCXX_3.4.12</span><br><span class="line">GLIBCXX_3.4.13</span><br><span class="line">GLIBCXX_FORCE_NEW</span><br><span class="line">GLIBCXX_DEBUG_MESSAGE_LENGTH</span><br></pre></td></tr></table></figure>
+<p>可见，动态库并没有随着g++, gcc的更新而更新</p>
+<h3 id="查询动态库的位置"><a href="#查询动态库的位置" class="headerlink" title="查询动态库的位置"></a>查询动态库的位置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先切换为root用户</span></span><br><span class="line">find / -name <span class="string">&quot;libstdc++.so*&quot;</span></span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/home/gcc-5.2.0/gcc-temp/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so</span><br><span class="line">/home/gcc-5.2.0/gcc-temp/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6</span><br><span class="line">/home/gcc-5.2.0/gcc-temp/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.21</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+<p>注意：上述结果根据不同安装设置可能会有差异。</p>
+<p>复制后，修改系统默认动态库的指向，即：重建默认库的软连接。</p>
+<p>切换工作目录至<code>/usr/lib64</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/lib64</span><br></pre></td></tr></table></figure>
+<p>删除原来软连接：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf libstdc++.so.6</span><br></pre></td></tr></table></figure>
+<p>将默认库的软连接指向最新动态库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s libstdc++.so.6.0.21 libstdc++.so.6</span><br></pre></td></tr></table></figure>
+<p>默认动态库升级完成。重新运行以下命令检查动态库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings /usr/lib64/libstdc++.so.6 | grep GLIBC</span><br></pre></td></tr></table></figure>
+<p>现在输出如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">GLIBCXX_3.4</span><br><span class="line">GLIBCXX_3.4.1</span><br><span class="line">GLIBCXX_3.4.2</span><br><span class="line">GLIBCXX_3.4.3</span><br><span class="line">GLIBCXX_3.4.4</span><br><span class="line">GLIBCXX_3.4.5</span><br><span class="line">GLIBCXX_3.4.6</span><br><span class="line">GLIBCXX_3.4.7</span><br><span class="line">GLIBCXX_3.4.8</span><br><span class="line">GLIBCXX_3.4.9</span><br><span class="line">GLIBCXX_3.4.10</span><br><span class="line">GLIBCXX_3.4.11</span><br><span class="line">GLIBCXX_3.4.12</span><br><span class="line">GLIBCXX_3.4.13</span><br><span class="line">GLIBCXX_3.4.14</span><br><span class="line">GLIBCXX_3.4.15</span><br><span class="line">GLIBCXX_3.4.16</span><br><span class="line">GLIBCXX_3.4.17</span><br><span class="line">GLIBCXX_3.4.18</span><br><span class="line">GLIBCXX_3.4.19</span><br><span class="line">GLIBCXX_3.4.20</span><br><span class="line">GLIBCXX_3.4.21</span><br><span class="line">GLIBC_2.3</span><br><span class="line">GLIBC_2.2.5</span><br><span class="line">GLIBC_2.3.2</span><br><span class="line">GLIBCXX_FORCE_NEW</span><br><span class="line">GLIBCXX_DEBUG_MESSAGE_LENGTH</span><br></pre></td></tr></table></figure>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/12/31/matlab-0/" >
-            
-                <span>matlab 0</span>
-        </a>
-        <!-- <div class="abstract-content">
-            
-Function:exp(x): e^x
-Commands:
-
-who: show all variableswhos: who + types +valuesclc: clear command windowclear: clear parameter tableformat [parameter]  (parameter = short, long, shortE, longE, rational(rat))
-
-Row vector&gt;&gt; a = [1 2 3 4]
-
-Column vector&gt;&gt; b = [1; 2; 3; 4]
-
-Matrix:&gt;&...
-        </div> -->
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "utilities">utilities</a>
-    
-</div>
-            
-            <div class= abstract-tags >
-    
-        <a class="post-category" href="javascript:void(0);" data-categories="Matlab">Matlab</a>
-    
-</div>
-            
-            
+        <div class="license-wrapper">
+            <p>Author: <a href="http://endsieg77.github.io">Endsieg77</a>
+            <p>Link: <a href="http://endsieg77.github.io/2021/01/12/Centos-Cpp17-Config/">http://endsieg77.github.io/2021/01/12/Centos-Cpp17-Config/</a>
+            <p>Post on: <a href="http://endsieg77.github.io/2021/01/12/Centos-Cpp17-Config/">January 12th 2021, 2:08:53 pm</a>
+            <p>Update on: <a href="http://endsieg77.github.io/2021/01/12/Centos-Cpp17-Config/">January 12th 2021, 2:20:53 pm</a>
         </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2021/01/08/Cantor-Expansion/" title= "Cantor Expansion">
+                    <div class="prevTitle">Cantor Expansion</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <div id="comment-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: '978a1c1390a51dedfdb1',
+            clientSecret: 'baf83efb3dd4dc0d072c8ca3bc615431a2ff9793',
+            id: '1610431733000',
+            repo: 'endsieg77.github.io',
+            owner: 'endsieg77',
+            admin: "endsieg77",
+            createIssueManually: true,
+            distractionFreeMode: false
+        })
+        gitalk.render('comment-container')
+    </script>
+    
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -563,6 +626,22 @@ Matrix:&gt;&...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+
+
+
+
+
+
+
+top:50vh;
+>
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#gcc-error-unrecognized-command-line-option-%E2%80%98-std-c-17%E2%80%99"><span class="toc-number">1.</span> <span class="toc-text">gcc: error: unrecognized command line option ‘-std&#x3D;c++17’</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">解决方案：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD%E9%97%AE%E9%A2%98%EF%BC%9A%E2%80%99GLIBCXX-3-4-21%E2%80%99-not-found"><span class="toc-number">1.2.</span> <span class="toc-text">后续问题：’GLIBCXX_3.4.21’ not found</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E5%8A%A8%E6%80%81%E5%BA%93"><span class="toc-number">1.2.1.</span> <span class="toc-text">检查动态库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E5%8A%A8%E6%80%81%E5%BA%93%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="toc-number">1.2.2.</span> <span class="toc-text">查询动态库的位置</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1059,6 +1138,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;

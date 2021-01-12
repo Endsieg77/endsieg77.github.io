@@ -242,6 +242,12 @@
     <div class="read-progress"></div>
     <ul class="toolbox">
         <li class="header-sidebar-menu">&#xe775;</li>
+        <!-- music box -->
+        
+        <li class="header-music" onclick="javascript:ShowMusic()">
+                <span class="">♬</span>
+        </li>
+        
         <li class="header-algolia">
             <!-- search  -->
             
@@ -249,12 +255,6 @@
                     <span class="iconfont-archer search-icon">&#xe627;</span>
                 </span>
             
-            <!-- <li class="header-music"> -->
-                <!-- music box  -->
-                <!--  -->
-                    <!-- <span class="">&#127925;</span> -->
-                <!--  -->
-            <!-- </li> -->
         </li>
     </ul>
     <!-- post页的toggle banner  -->
@@ -629,7 +629,6 @@ height:50vh;
     <!-- toc -->
     
     <div class="toc-wrapper" style=
-    
 
 
 
@@ -638,8 +637,7 @@ height:50vh;
 
 
 top:50vh;
-
-    >
+>
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
@@ -853,16 +851,28 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 17
+        Total : 18
         </div>
     </div>
     <!-- 音乐播放器 -->
     <meting-js server="netease" type="playlist" id="5445319843" list-max-height='165px'></meting-js>
-    <!-- <div>
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=360 height=330 src="//music.163.com/outchain/player?type=0&id=5445319843&auto=0&height=430"></iframe>
-    </div> -->
     
     <div class="post-archive">
     
@@ -871,6 +881,11 @@ top:50vh;
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/12</span><a class="archive-post-title" href= "/2021/01/12/Centos-Cpp17-Config/" >Centos Cpp17 Config</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -993,6 +1008,8 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="realization"><span class="iconfont-archer">&#xe606;</span>realization</span>
     
+        <span class="sidebar-tag-name" data-tags="remedies"><span class="iconfont-archer">&#xe606;</span>remedies</span>
+    
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
@@ -1052,6 +1069,8 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="algorithm"><span class="iconfont-archer">&#xe60a;</span>algorithm</span>
     
+        <span class="sidebar-category-name" data-categories="Centos7"><span class="iconfont-archer">&#xe60a;</span>Centos7</span>
+    
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
     <div class="sidebar-categories-list"></div>
@@ -1074,6 +1093,19 @@ jsonContent:
         }
     </script>
     <script src="/scripts/main.js"></script>
+    <!-- music box -->
+    
+        <div class="music-container">
+    <div class="music">
+        <!-- 音乐播放器 -->
+        <meting-js server="netease" type="playlist" id="5445319843" list-max-height='165px'></meting-js>
+        <span class="popup-btn-close">
+            <i class="iconfont-archer">&#xe609;</i>
+        </span>
+    </div>
+</div>
+        <script src="/scripts/block.js" defer></script>
+    
     <!-- algolia -->
     
         <div class="site-search">
