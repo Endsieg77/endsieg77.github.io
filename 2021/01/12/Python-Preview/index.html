@@ -28,7 +28,7 @@
 <meta property="og:description" content="Overture Brief Introduction　　Python是一种动态的(变量类型, 函数定义可以在代码中改变)、强类型的(不同类型之间的运算有严格的限制)脚本语言，亦是一种胶水语言(用来拼接一个项目中不同语言的成分)。 　　其由荷兰数学和计算机科学研究学会的Guido van Rossum 于1990 年代初设计。名字来源为英国20世纪70年代首播的电视喜剧《蒙提·派森的飞行马戏团》(">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-12T12:37:11.000Z">
-<meta property="article:modified_time" content="2021-01-13T09:32:36.327Z">
+<meta property="article:modified_time" content="2021-01-13T12:08:47.983Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="grammatical">
 <meta property="article:tag" content="basic">
@@ -594,8 +594,14 @@ height:50vh;
 <p><code>addr of a is: 2347657685584, b is: 2347657685584</code><br><code>addr of a is: 2347657685584, b is: 2347657685424</code></p>
 <p>可见，Python对不可变对象的字面值赋值处理方式是：</p>
 <p>开辟一块新的内存，让被改变的对象指向这块内存。其他的对象的内存指向不改变。</p>
+</blockquote>
+<hr>
+<blockquote>
 <p>而对于可变对象，处理的方式便不同了。</p>
 <p>对可变对象的修改不会开辟新的内存空间。但也有特例，如果赋予可变对象一个不可变对象字面值，那么可变对象的仍会开辟新的内存地址。</p>
+</blockquote>
+<hr>
+<blockquote>
 <p>下面给出一个规律性的总结：</p>
 <p>当对一个变量赋值的时候，</p>
 <p>如果右式是变量，那么左式得到右式的引用(<code>reference</code>)；</p>
@@ -610,6 +616,7 @@ height:50vh;
 <hr>
 <blockquote>
 <h3 id="可变与可哈希"><a href="#可变与可哈希" class="headerlink" title="可变与可哈希"></a>可变与可哈希</h3><p>Python中，可变对象是不可哈希的，而不可变对象是可哈希的。</p>
+<hr>
 <p>体现在字典上：{keys: vals}</p>
 <p>键值对的键必须是不可变对象，因为不可变对象可以产生哈希值，而Python的字典底层是用哈希表实现的。(C++中的std::map底层则是红黑树，而std::unordered_map底层是哈希表)。</p>
 <p>而对于值则没有要求。</p>
@@ -623,7 +630,7 @@ height:50vh;
             <p>Author: <a href="http://endsieg77.github.io">Endsieg77</a>
             <p>Link: <a href="http://endsieg77.github.io/2021/01/12/Python-Preview/">http://endsieg77.github.io/2021/01/12/Python-Preview/</a>
             <p>Post on: <a href="http://endsieg77.github.io/2021/01/12/Python-Preview/">January 12th 2021, 8:37:11 pm</a>
-            <p>Update on: <a href="http://endsieg77.github.io/2021/01/12/Python-Preview/">January 13th 2021, 5:32:36 pm</a>
+            <p>Update on: <a href="http://endsieg77.github.io/2021/01/12/Python-Preview/">January 13th 2021, 8:08:47 pm</a>
         </div>
     
     <!-- paginator  -->
