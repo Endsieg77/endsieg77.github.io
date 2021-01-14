@@ -572,14 +572,6 @@ li {
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6)
 }
 
-.friend-avatar {
-    display: inline-block;
-    border-radius: 2.5rem;
-    border: #231466 1px solid;
-    width: 24%;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6)
-}
-
 .profile-name {
     font-size: 2rem;
     line-height: 3rem;
@@ -888,26 +880,26 @@ li {
 }
 
 .friends-name {
-    display: inline-block;
+    font-weight: normal;
+    text-align: left;
     font-size: 15px;
     padding: 0.5rem 0;
-    /* font-weight: bold; */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    text-align: center
 }
 
 .friends-name:hover {
-    display: inline-block;
-    font-size: 15px;
     font-weight: bold;
     text-decoration: underline;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    text-align: center
 }
 
 .friends a {
     margin-right: 0.6rem
+}
+
+.friends-avatar {
+    width: 30%;
+    border-radius: 2.5rem;
+    border: #231466 1px solid;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6)
 }
 
 .about-me {
@@ -2269,6 +2261,11 @@ html::-webkit-scrollbar-track:hover,
     opacity: 1
 }
 
+.post-tag::before {
+    margin-right: 2px;
+    content: '#'
+}
+
 .post-tag::after {
     content: '';
     position: absolute;
@@ -2280,11 +2277,6 @@ html::-webkit-scrollbar-track:hover,
     transform: translate(0, 0);
     background-color: #aaa;
     opacity: 0
-}
-
-.post-tag::before {
-    margin-right: 2px;
-    content: '#'
 }
 
 .post-tag:hover::after {
@@ -2871,7 +2863,7 @@ html::-webkit-scrollbar-track:hover,
     transition: transform 0.3s ease;
     z-index: 21;
     position: absolute;
-    margin-left: 0.5rem;
+    margin-left: 2rem;
     border: 2px;
     transform: translate(0, -50%);
     transition: transform 0.3s ease;
@@ -2887,6 +2879,13 @@ html::-webkit-scrollbar-track:hover,
 }
 
 .header-music {
+    cursor: pointer;
+    text-align: center;
+    border: 2px rgb(255, 0, 21) solid;
+    /* border-radius: 0.5rem; */
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 2rem;
     display: inline-block;
     transform: translate(0, -50%);
     transition: transform 0.3s ease;
@@ -2897,13 +2896,13 @@ html::-webkit-scrollbar-track:hover,
     transform: translate(0, -50%);
     transition: transform 0.3s ease;
     font-family: 'iconfont-archer';
-    color: #fff;
+    color: rgb(255, 0, 21);
     line-height: 1.5rem;
 }
 
 .header-music:hover {
-    background-color: #fff;
-    color: #000;
+    border: 2px rgb(0, 4, 255) solid;
+    color: rgb(0, 4, 255);
     transform: translate(0, -50%)
 }
 
@@ -2927,4 +2926,65 @@ html::-webkit-scrollbar-track:hover,
     top: 23%;
     white-space: nowrap;
     position: absolute
+}
+
+.music-container {
+    height: 180px;
+    width: ;
+    display: none;
+}
+
+.music {
+    overflow: hidden;
+    padding: 0
+}
+
+.music .popup-btn-close {
+    padding-left: 15px;
+    border-left: 1px solid #eee;
+    top: 10px
+}
+
+.music .popup-btn-close .fa {
+    color: #999;
+    font-size: 18px
+}
+
+.music .popup-btn-close:hover .fa {
+    color: #222
+}
+
+.handpick-title {
+    color: #00a2ff;
+    font-family: "Oswald-Regular";
+    line-height: 0.2rem;
+    padding-bottom: 0.2rem
+}
+
+.handpick-title::before {
+    content: "- ";
+    color: #00a2ff;
+    font-family: "Oswald-Regular";
+    line-height: 0.2rem;
+    padding-bottom: 0.2rem
+}
+
+.handpick-title:hover::before {
+    color: #eb174c;
+}
+
+.handpick-title:hover {
+    color: #eb174c;
+}
+
+.handpick-post {
+    position: relative;
+    padding: 0.25rem 0rem 0.25rem 0rem;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+    z-index: 3
+}
+
+.handpick-post .abstract-content img {
+    max-width: 100%;
+    box-shadow: none
 }

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://endsieg77.github.io/2021/01/03/Effective-C/</loc>
+    <lastmod>2021-01-14</lastmod>
+  </url>
+  <url>
+    <loc>http://endsieg77.github.io/2021/01/08/WATERLOO-2021-1-8/</loc>
+    <lastmod>2021-01-14</lastmod>
+  </url>
+  <url>
     <loc>http://endsieg77.github.io/2021/01/12/Python-Preview/</loc>
     <lastmod>2021-01-14</lastmod>
   </url>
@@ -33,10 +41,6 @@
     <lastmod>2021-01-12</lastmod>
   </url>
   <url>
-    <loc>http://endsieg77.github.io/2021/01/08/WATERLOO-2021-1-8/</loc>
-    <lastmod>2021-01-08</lastmod>
-  </url>
-  <url>
     <loc>http://endsieg77.github.io/2021/01/07/my-header-library/</loc>
     <lastmod>2021-01-08</lastmod>
   </url>
@@ -63,10 +67,6 @@
   <url>
     <loc>http://endsieg77.github.io/2020/12/31/matlab-0/</loc>
     <lastmod>2021-01-06</lastmod>
-  </url>
-  <url>
-    <loc>http://endsieg77.github.io/2021/01/03/Effective-C/</loc>
-    <lastmod>2021-01-03</lastmod>
   </url>
   <url>
     <loc>http://endsieg77.github.io/2021/01/01/ot-fs/</loc>
