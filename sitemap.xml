@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://endsieg77.github.io/about/index.html</loc>
+    
+    <lastmod>2021-01-14</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://endsieg77.github.io/2021/01/03/Effective-C/</loc>
     
     <lastmod>2021-01-14</lastmod>
@@ -94,13 +101,6 @@
   
   <url>
     <loc>http://endsieg77.github.io/2021/01/08/functional-foundations/</loc>
-    
-    <lastmod>2021-01-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/about/index.html</loc>
     
     <lastmod>2021-01-07</lastmod>
     
