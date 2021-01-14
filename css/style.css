@@ -2863,7 +2863,7 @@ html::-webkit-scrollbar-track:hover,
     transition: transform 0.3s ease;
     z-index: 21;
     position: absolute;
-    margin-left: 2rem;
+    margin-left: 0.4rem;
     border: 2px;
     transform: translate(0, -50%);
     transition: transform 0.3s ease;
