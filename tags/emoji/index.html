@@ -236,12 +236,6 @@
     <div class="read-progress"></div>
     <ul class="toolbox">
         <li class="header-sidebar-menu">&#xe775;</li>
-        <!-- music box -->
-        <!--  -->
-        <!-- <li class="header-music" onclick="javascript:ShowMusic()"> -->
-                <!-- <span class="">♬</span> -->
-        <!-- </li> -->
-        <!--  -->
         <li class="header-algolia">
             <!-- search  -->
             
@@ -422,6 +416,33 @@
     
     <!-- paginator  -->
     
+    <!-- index页评论区 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!-- gitalk评论 -->
+
+    <div id="comment-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: '978a1c1390a51dedfdb1',
+            clientSecret: 'baf83efb3dd4dc0d072c8ca3bc615431a2ff9793',
+            id: '',
+            repo: 'endsieg77.github.io',
+            owner: 'endsieg77',
+            admin: "endsieg77",
+            createIssueManually: true,
+            distractionFreeMode: false
+        })
+        gitalk.render('comment-container')
+    </script>
+    
+    <!-- utteranc评论 -->
+
 </main>
             <!-- profile -->
             
@@ -1035,19 +1056,6 @@ jsonContent:
         }
     </script>
     <script src="/scripts/main.js"></script>
-    <!-- music box -->
-    <!--  -->
-        <!-- <!-- <div class="music-container"> -->
-    <!-- <div class="music"> -->
-        <!-- 音乐播放器 -->
-        <!-- <meting-js server="netease" type="playlist" id="5445319843" list-max-height='165px'></meting-js> -->
-        <!-- <span class="popup-btn-close"> -->
-            <!-- <i class="iconfont-archer">&#xe609;</i> -->
-        <!-- </span> -->
-    <!-- </div> -->
-<!-- </div> --> -->
-        <!-- <script src="/scripts/block.js" defer></script> -->
-    <!--  -->
     <!-- algolia -->
     
         <div class="site-search">

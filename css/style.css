@@ -2878,50 +2878,6 @@ html::-webkit-scrollbar-track:hover,
     transform: translate(0, -50%)
 }
 
-.header-music {
-    cursor: pointer;
-    text-align: center;
-    border: 2px rgb(255, 0, 21) solid;
-    /* border-radius: 0.5rem; */
-    height: 1.5rem;
-    width: 1.5rem;
-    font-size: 2rem;
-    display: inline-block;
-    transform: translate(0, -50%);
-    transition: transform 0.3s ease;
-    z-index: 21;
-    position: absolute;
-    margin-left: 0.5rem;
-    top: 53%;
-    transform: translate(0, -50%);
-    transition: transform 0.3s ease;
-    font-family: 'iconfont-archer';
-    color: rgb(255, 0, 21);
-    line-height: 1.5rem;
-}
-
-.header-music:hover {
-    border: 2px rgb(0, 4, 255) solid;
-    color: rgb(0, 4, 255);
-    transform: translate(0, -50%)
-}
-
-.header-music-active {
-    transform: translate(0, -50%) rotate(180deg) !important;
-    transition: transform 0.3s ease
-}
-
-.header-music-black {
-    color: #000;
-    background-color: #fff;
-    border-color: #000
-}
-
-.header-music-black:hover {
-    background-color: #000;
-    color: #fff
-}
-
 .toolbox {
     top: 23%;
     white-space: nowrap;
