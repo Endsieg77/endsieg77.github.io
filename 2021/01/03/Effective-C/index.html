@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://endsieg77.github.io/images/hana_noa.jpg">
 <meta property="article:published_time" content="2021-01-02T18:01:15.000Z">
-<meta property="article:modified_time" content="2021-01-15T14:52:13.845Z">
+<meta property="article:modified_time" content="2021-01-16T07:45:41.687Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="utilities">
 <meta name="twitter:card" content="summary">
@@ -495,7 +495,12 @@ height:50vh;
 </blockquote>
 <hr>
 <blockquote>
-<h2 id="A-Class-Intended-for-Resource-Management"><a href="#A-Class-Intended-for-Resource-Management" class="headerlink" title="A Class Intended for Resource Management"></a>A Class Intended for Resource Management</h2></blockquote>
+<h2 id="A-Class-Intended-for-Resource-Management"><a href="#A-Class-Intended-for-Resource-Management" class="headerlink" title="A Class Intended for Resource Management"></a>A Class Intended for Resource Management</h2><p><strong>Two Critical Criterion:</strong></p>
+<ul>
+<li>RAII， 获得资源后立刻放入资源管理对象。</li>
+<li>管理对象运用析构函数确保资源被释放。</li>
+</ul>
+</blockquote>
 <p><img src="/images/hana_noa.jpg" alt="Hana_Noa"></p>
 
     </article>
@@ -505,7 +510,7 @@ height:50vh;
             <p>Author: <a href="http://endsieg77.github.io">Endsieg77</a>
             <p>Link: <a href="http://endsieg77.github.io/2021/01/03/Effective-C/">http://endsieg77.github.io/2021/01/03/Effective-C/</a>
             <p>Post on: <a href="http://endsieg77.github.io/2021/01/03/Effective-C/">January 3rd 2021, 2:01:15 am</a>
-            <p>Update on: <a href="http://endsieg77.github.io/2021/01/03/Effective-C/">January 15th 2021, 10:52:13 pm</a>
+            <p>Update on: <a href="http://endsieg77.github.io/2021/01/03/Effective-C/">January 16th 2021, 3:45:41 pm</a>
         </div>
     
     <!-- paginator  -->
@@ -1348,7 +1353,12 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;
+    i
+    < all.length; ++i) all[i].SourceElement().parentNode.className +=' has-jax' ; }); </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
 
 
