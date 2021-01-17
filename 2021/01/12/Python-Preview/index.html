@@ -28,7 +28,7 @@
 <meta property="og:description" content="Overture Brief Introduction　　Python是一种动态的(变量类型, 函数定义可以在代码中改变)、强类型的(不同类型之间的运算有严格的限制)脚本语言(也叫胶水语言)(用来拼接一个项目中不同语言的成分)。 　　其由荷兰数学和计算机科学研究学会的Guido van Rossum 于1990 年代初设计。名字来源为英国20世纪70年代首播的电视喜剧《蒙提·派森的飞行马戏团》(M">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-12T12:37:11.000Z">
-<meta property="article:modified_time" content="2021-01-17T10:35:24.581Z">
+<meta property="article:modified_time" content="2021-01-17T11:03:36.699Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="basic">
 <meta property="article:tag" content="grammatical">
@@ -733,7 +733,7 @@ height:50vh;
 <p>用C++的方式来理解a, b = b, a的原理：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> pb = &amp;b;</span><br><span class="line"><span class="keyword">auto</span> pa = &amp;a;</span><br><span class="line">&amp;a = pb;</span><br><span class="line">&amp;b = pa;</span><br></pre></td></tr></table></figure>
 <p>对于a, b, c = c, a, b的情形，其原理也是一样的。</p>
-<p>但不同的是，C++不可以随意修改变量的地址，所以Python的底层做法应该不是这样的。</p>
+<p>但不同的是，C++不可以随意修改变量的地址，上述代码无法通过编译，所以Python的底层做法应该不是这样的。</p>
 </blockquote>
 <ul>
 <li>不可变对象被初始化的时候，编译器分配一个随机的地址给这个对象。值相同的对象指向<strong>同一个地址</strong>。当对象值改变，其地址也随之改变。</li>
@@ -762,7 +762,7 @@ height:50vh;
             <p>Author: <a href="http://endsieg77.github.io">Endsieg77</a>
             <p>Link: <a href="http://endsieg77.github.io/2021/01/12/Python-Preview/">http://endsieg77.github.io/2021/01/12/Python-Preview/</a>
             <p>Post on: <a href="http://endsieg77.github.io/2021/01/12/Python-Preview/">January 12th 2021, 8:37:11 pm</a>
-            <p>Update on: <a href="http://endsieg77.github.io/2021/01/12/Python-Preview/">January 17th 2021, 6:35:24 pm</a>
+            <p>Update on: <a href="http://endsieg77.github.io/2021/01/12/Python-Preview/">January 17th 2021, 7:03:36 pm</a>
         </div>
     
     <!-- paginator  -->
@@ -1481,7 +1481,12 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;
+    i
+    < all.length; ++i) all[i].SourceElement().parentNode.className +=' has-jax' ; }); </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
 
 
