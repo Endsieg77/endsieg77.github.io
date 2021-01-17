@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://endsieg77.github.io/images/QT_VSCODE/p1.jpg">
 <meta property="og:image" content="http://endsieg77.github.io/images/QT_VSCODE/qt_inheritance.png">
 <meta property="article:published_time" content="2021-01-17T07:00:05.000Z">
-<meta property="article:modified_time" content="2021-01-17T08:40:33.272Z">
+<meta property="article:modified_time" content="2021-01-17T08:43:01.952Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="utilities">
 <meta name="twitter:card" content="summary">
@@ -459,7 +459,8 @@ height:50vh;
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">target_include_directories</span>(qtest PRIVATE <span class="string">&quot;$&#123;CMAKE_BINARY_DIR&#125;/qtest_autogen/include_Debug&quot;</span>)</span><br></pre></td></tr></table></figure>
 <p>具体原理，暂时还不懂。</p>
 <p>参考：<a target="_blank" rel="noopener" href="https://www.jb51.net/article/197753.htm">使用VS Code进行Qt开发的实现</a></p>
-<h1 id="QT继承关系"><a href="#QT继承关系" class="headerlink" title="QT继承关系"></a>QT继承关系</h1><p><img src="/images/QT_VSCODE/qt_inheritance.png" alt=""></p>
+<h1 id="QT继承关系"><a href="#QT继承关系" class="headerlink" title="QT继承关系"></a>QT继承关系</h1><p>图源：<a target="_blank" rel="noopener" href="https://www.processon.com/view/5758f23de4b080e40c7feaca">https://www.processon.com/view/5758f23de4b080e40c7feaca</a></p>
+<p><img src="/images/QT_VSCODE/qt_inheritance.png" alt=""></p>
 <h1 id="QPushButton"><a href="#QPushButton" class="headerlink" title="QPushButton"></a>QPushButton</h1><hr>
 <h2 id=""><a href="#" class="headerlink" title=""></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个QPushButton对象：</span></span><br><span class="line">QPushButton *btn = <span class="keyword">new</span> QPushButton;</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置button的文本：</span></span><br><span class="line">btn-&gt;setText(<span class="keyword">const</span> QString&amp;);</span><br><span class="line"><span class="comment">//设置button的父对象：(如在某对象的构造函数中，要将button的父对象设置为该对象，则填入this)</span></span><br><span class="line">btn-&gt;setParent(<span class="keyword">const</span> QObject*&amp;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//在构造函数中完成以上初始化：</span></span><br><span class="line">QPushButton *btn2 = <span class="keyword">new</span> QPushButton(<span class="string">&quot;text&quot;</span>, <span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//移动：</span></span><br><span class="line">move(<span class="keyword">const</span> QPoint&amp;);</span><br><span class="line"><span class="comment">//存在由两个数向QPoint隐式转换的构造函数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//重设大小：</span></span><br><span class="line">resize(<span class="keyword">const</span> QSize&amp;);</span><br><span class="line"><span class="comment">//or:</span></span><br><span class="line">resize(<span class="keyword">int</span> w, <span class="keyword">int</span> h);</span><br></pre></td></tr></table></figure></h2>
     </article>
@@ -469,7 +470,7 @@ height:50vh;
             <p>Author: <a href="http://endsieg77.github.io">Endsieg77</a>
             <p>Link: <a href="http://endsieg77.github.io/2021/01/17/QT-Creator/">http://endsieg77.github.io/2021/01/17/QT-Creator/</a>
             <p>Post on: <a href="http://endsieg77.github.io/2021/01/17/QT-Creator/">January 17th 2021, 3:00:05 pm</a>
-            <p>Update on: <a href="http://endsieg77.github.io/2021/01/17/QT-Creator/">January 17th 2021, 4:40:33 pm</a>
+            <p>Update on: <a href="http://endsieg77.github.io/2021/01/17/QT-Creator/">January 17th 2021, 4:43:01 pm</a>
         </div>
     
     <!-- paginator  -->
