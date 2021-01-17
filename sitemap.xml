@@ -128,6 +128,13 @@
   </url>
   
   <url>
+    <loc>http://endsieg77.github.io/2021/01/01/ot-fs/</loc>
+    
+    <lastmod>2021-01-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://endsieg77.github.io/2021/01/02/latex/</loc>
     
     <lastmod>2021-01-06</lastmod>
@@ -138,13 +145,6 @@
     <loc>http://endsieg77.github.io/2020/12/31/matlab-0/</loc>
     
     <lastmod>2021-01-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/2021/01/01/ot-fs/</loc>
-    
-    <lastmod>2021-01-02</lastmod>
     
   </url>
   
@@ -172,49 +172,7 @@
 
   
   <url>
-    <loc>http://endsieg77.github.io/tags/Poems/</loc>
-    <lastmod>2021-01-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/tags/grammatical/</loc>
-    <lastmod>2021-01-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/tags/utilities/</loc>
-    <lastmod>2021-01-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/tags/Plugins/</loc>
-    <lastmod>2021-01-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/tags/Marks/</loc>
-    <lastmod>2021-01-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/tags/awsl/</loc>
-    <lastmod>2021-01-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/tags/Data-Structure/</loc>
+    <loc>http://endsieg77.github.io/tags/basic/</loc>
     <lastmod>2021-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -222,13 +180,6 @@
   
   <url>
     <loc>http://endsieg77.github.io/tags/algebra-and-geometry/</loc>
-    <lastmod>2021-01-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/tags/retrospect/</loc>
     <lastmod>2021-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -249,14 +200,28 @@
   </url>
   
   <url>
-    <loc>http://endsieg77.github.io/tags/todos/</loc>
+    <loc>http://endsieg77.github.io/tags/utilities/</loc>
     <lastmod>2021-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://endsieg77.github.io/tags/basic/</loc>
+    <loc>http://endsieg77.github.io/tags/Poems/</loc>
+    <lastmod>2021-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://endsieg77.github.io/tags/Marks/</loc>
+    <lastmod>2021-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://endsieg77.github.io/tags/Plugins/</loc>
     <lastmod>2021-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -276,31 +241,66 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://endsieg77.github.io/tags/retrospect/</loc>
+    <lastmod>2021-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://endsieg77.github.io/tags/grammatical/</loc>
+    <lastmod>2021-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://endsieg77.github.io/tags/todos/</loc>
+    <lastmod>2021-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://endsieg77.github.io/tags/awsl/</loc>
+    <lastmod>2021-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://endsieg77.github.io/tags/Data-Structure/</loc>
+    <lastmod>2021-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
+    <loc>http://endsieg77.github.io/categories/Maths/</loc>
+    <lastmod>2021-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://endsieg77.github.io/categories/algorithm/</loc>
+    <lastmod>2021-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://endsieg77.github.io/categories/Centos7/</loc>
+    <lastmod>2021-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://endsieg77.github.io/categories/Hollow-Knight/</loc>
-    <lastmod>2021-01-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/categories/Matlab/</loc>
-    <lastmod>2021-01-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/categories/letters/</loc>
-    <lastmod>2021-01-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/categories/Latex/</loc>
     <lastmod>2021-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -328,14 +328,21 @@
   </url>
   
   <url>
-    <loc>http://endsieg77.github.io/categories/Maths/</loc>
+    <loc>http://endsieg77.github.io/categories/Centos7/Linux/</loc>
     <lastmod>2021-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://endsieg77.github.io/categories/Social-Science/</loc>
+    <loc>http://endsieg77.github.io/categories/Python/</loc>
+    <lastmod>2021-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://endsieg77.github.io/categories/dishonor/</loc>
     <lastmod>2021-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -356,21 +363,21 @@
   </url>
   
   <url>
-    <loc>http://endsieg77.github.io/categories/dishonor/</loc>
+    <loc>http://endsieg77.github.io/categories/Latex/</loc>
     <lastmod>2021-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://endsieg77.github.io/categories/algorithm/</loc>
+    <loc>http://endsieg77.github.io/categories/Matlab/</loc>
     <lastmod>2021-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://endsieg77.github.io/categories/Centos7/</loc>
+    <loc>http://endsieg77.github.io/categories/letters/</loc>
     <lastmod>2021-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -384,14 +391,7 @@
   </url>
   
   <url>
-    <loc>http://endsieg77.github.io/categories/Python/</loc>
-    <lastmod>2021-01-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/categories/Centos7/Linux/</loc>
+    <loc>http://endsieg77.github.io/categories/Social-Science/</loc>
     <lastmod>2021-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
