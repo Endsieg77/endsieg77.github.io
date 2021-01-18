@@ -398,21 +398,14 @@
   </url>
   
   <url>
-    <loc>http://endsieg77.github.io/categories/Front-end/</loc>
-    <lastmod>2021-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://endsieg77.github.io/categories/Front-end/WOC/</loc>
-    <lastmod>2021-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://endsieg77.github.io/categories/F2E/</loc>
+    <lastmod>2021-01-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://endsieg77.github.io/categories/F2E/WOC/</loc>
     <lastmod>2021-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
