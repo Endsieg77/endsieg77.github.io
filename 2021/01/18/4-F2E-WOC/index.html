@@ -20,18 +20,18 @@
     <meta name="keywords" content="Offensive77,Endsieg77,Blog">
     
     <meta name="description" content="">
-    <meta name="description" content="JQuery Config  在想要初始化的目录下，用vscode终端，输入npm init -y(-y的意思是不需要自己手动输yes)，初始化npm。      下载jquery库 npm i jquery -S i是install S是save的意思。      导入jquery    JQuery基础回顾 Selector1$(&quot;tag.class&quot;).action()">
+    <meta name="description" content="JQuery Config  在想要初始化的目录下，用vscode终端，输入npm init -y(-y的意思是不需要自己手动输yes)，初始化npm。      下载jquery库 npm i jquery -S i是install S是save的意思。      导入jquery    VUE Config 安装首先换一个国内的npm源。这里由于我已经换过了，所以这一步跳过。 然后在终端输入：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4 F2E WOC">
 <meta property="og:url" content="http://endsieg77.github.io/2021/01/18/4-F2E-WOC/index.html">
 <meta property="og:site_name" content="Endsieg77&#39;s Studio">
-<meta property="og:description" content="JQuery Config  在想要初始化的目录下，用vscode终端，输入npm init -y(-y的意思是不需要自己手动输yes)，初始化npm。      下载jquery库 npm i jquery -S i是install S是save的意思。      导入jquery    JQuery基础回顾 Selector1$(&quot;tag.class&quot;).action()">
+<meta property="og:description" content="JQuery Config  在想要初始化的目录下，用vscode终端，输入npm init -y(-y的意思是不需要自己手动输yes)，初始化npm。      下载jquery库 npm i jquery -S i是install S是save的意思。      导入jquery    VUE Config 安装首先换一个国内的npm源。这里由于我已经换过了，所以这一步跳过。 然后在终端输入：">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://endsieg77.github.io/images/WOC/F2E/jquery1.png">
 <meta property="og:image" content="http://endsieg77.github.io/images/jquery2-1610936880523.png">
 <meta property="og:image" content="http://endsieg77.github.io/images/jqueryimport.png">
 <meta property="article:published_time" content="2021-01-18T02:09:06.000Z">
-<meta property="article:modified_time" content="2021-01-18T17:21:45.707Z">
+<meta property="article:modified_time" content="2021-01-18T17:28:37.663Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="warstory">
 <meta name="twitter:card" content="summary">
@@ -463,172 +463,6 @@ height:50vh;
 </ul>
 </blockquote>
 <p><img src="/images/jqueryimport.png" alt=""></p>
-<h1 id="JQuery基础回顾"><a href="#JQuery基础回顾" class="headerlink" title="JQuery基础回顾"></a>JQuery基础回顾</h1><blockquote>
-<h2 id="Selector"><a href="#Selector" class="headerlink" title="Selector"></a>Selector</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;tag.class&quot;</span>).action()</span><br></pre></td></tr></table></figure>
-<p>or:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;tag#id&quot;</span>).action()</span><br></pre></td></tr></table></figure>
-<p>其中<code>$</code>是jQuery引入符，tag是html标签，class和id是标签属性中的名字。action()是某一事件。</p>
-<p>特别地，</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;...&#125;)</span><br></pre></td></tr></table></figure>
-<p>在文档流加载完成后进行。和原生js中的<code>windows.onload</code>类似。</p>
-<hr>
-<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>鼠标事件</th>
-<th>键盘事件</th>
-<th>表单事件</th>
-<th>窗口事件</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>click()</td>
-<td>keypress()</td>
-<td>submit()</td>
-<td>scroll()</td>
-</tr>
-<tr>
-<td>dblclick()</td>
-<td>keydown()</td>
-<td>change()</td>
-<td>resize()</td>
-</tr>
-<tr>
-<td>mouseenter()</td>
-<td>keyup()</td>
-<td>focus()</td>
-<td></td>
-</tr>
-<tr>
-<td>mouseleave()</td>
-<td></td>
-<td>blur()</td>
-<td></td>
-</tr>
-<tr>
-<td>hover( , )</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<blockquote>
-<h3 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h3><hr>
-<p>可以为任意标签添加。事件都是字面意思，没什么好说的。</p>
-<p>要注意的是hover需要为鼠标悬停和离开分别指定两个事件。</p>
-<hr>
-<h3 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h3><hr>
-<p>一般对输入框等添加。</p>
-<p>也可以对window等添加。</p>
-<p>例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cnt = <span class="number">0</span>;</span><br><span class="line">$(<span class="built_in">window</span>).keypress(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    cnt += <span class="number">1</span>;</span><br><span class="line">    $(<span class="string">&quot;p.cnt&quot;</span>).text(cnt);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>总计在窗口中键盘被按下的次数。</p>
-<hr>
-<h3 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h3><hr>
-<p>一般对input等添加。</p>
-<ul>
-<li><p>submit()在提交后被执行。</p>
-</li>
-<li><p>change()在被改变后执行。</p>
-</li>
-<li><p>focus()在被选中时执行。</p>
-</li>
-</ul>
-<blockquote>
-<p>一个特殊用法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(elem).focus().action()</span><br></pre></td></tr></table></figure>
-<p>由于elem被聚焦时，focus()始终处于触发状态，action()不会被触发，而当elem失去焦点，则触发action()。action()可以是fadeOut()等。</p>
-</blockquote>
-<ul>
-<li>blur()则在not focus时执行。</li>
-</ul>
-<hr>
-<h3 id="窗口事件"><a href="#窗口事件" class="headerlink" title="窗口事件"></a>窗口事件</h3><hr>
-<p>一般对window添加。</p>
-</blockquote>
-<hr>
-<h2 id="Chaining"><a href="#Chaining" class="headerlink" title="Chaining"></a>Chaining</h2><p>jQuery为了防止重复选择同一元素而设计的语法。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(elem).action1().action2()...</span><br></pre></td></tr></table></figure>
-<p>当然，也可以写成下面形式，以求美观。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(elem).action1()</span><br><span class="line">	.action2()</span><br><span class="line">	.action3()</span><br><span class="line">	...</span><br></pre></td></tr></table></figure>
-<h2 id="Effects"><a href="#Effects" class="headerlink" title="Effects"></a>Effects</h2><blockquote>
-<h3 id="显示，隐藏"><a href="#显示，隐藏" class="headerlink" title="显示，隐藏"></a>显示，隐藏</h3><hr>
-<ul>
-<li>hide(), show() 字面意思。</li>
-<li>toggle(speed, callback) 可以用来切换hide()和show()，speed为速度，speed可以是”slow”, “fast”, 毫秒，callback为每次执行后的回调函数。注意，每个被选择的标签都会执行一次回调函数。</li>
-</ul>
-<hr>
-<h3 id="淡入，淡出"><a href="#淡入，淡出" class="headerlink" title="淡入，淡出"></a>淡入，淡出</h3><hr>
-<ul>
-<li><p>fadeIn, fadeOut, fadeToggle (speed, callback) </p>
-</li>
-<li><p>fadeTo将元素转为某一不透明度(0~1)。</p>
-<p>$(selector).fadeTo(speed,opacity,callback);</p>
-</li>
-</ul>
-<hr>
-<h3 id="滑动"><a href="#滑动" class="headerlink" title="滑动"></a>滑动</h3><hr>
-<ul>
-<li>slideUp, slideDown, slideToggle(speed, callback)</li>
-</ul>
-<hr>
-<h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><hr>
-<ul>
-<li>$(selector).animate({params},speed,callback);<br>params为动画结束后该元素的css样式。</li>
-<li>$(selector).stop(stopAll=false, goToEnd=false)在动画结束前停止动画。<br>stopAll是清空动画队列，goToEnd是将动画立刻完成。二者默认false。</li>
-</ul>
-<hr>
-</blockquote>
-<h2 id="Acquire-Contents-amp-Attributions"><a href="#Acquire-Contents-amp-Attributions" class="headerlink" title="Acquire Contents &amp; Attributions"></a>Acquire Contents &amp; Attributions</h2><blockquote>
-<ul>
-<li><p>text() 获取或修改文本内容，无参为获取，有参为修改；</p>
-</li>
-<li><p>html() 获取或修改带html标签的文本内容；</p>
-</li>
-<li><p>val() 获取或修改表单的值。</p>
-</li>
-<li><p>上面三种方法的回调函数：</p>
-<p>摘自W3School：<code>上面的三个 jQuery 方法：text()、html() 以及 val()，同样拥有回调函数。回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。</code><br><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=jquery_dom_html_callback">实例</a></p>
-</li>
-<li><p>attr()</p>
-<blockquote>
-<ol>
-<li>对类似<code>&lt;a href=&quot;#&quot;&gt; &lt;/a&gt;</code>这样的，如果要得到其href，只需将attr的参数传为”href”即可。</li>
-<li>如果要修改属性，有两种方法：</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 一次改一个属性：</span></span><br><span class="line">$(selector).attr(<span class="string">&quot;attr1&quot;</span>, <span class="string">&quot;value&quot;</span>);</span><br><span class="line"><span class="comment">// 2. 一次改多个属性：</span></span><br><span class="line">$(selector).attr(&#123;</span><br><span class="line">    <span class="string">&quot;key1&quot;</span>: <span class="string">&quot;value1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;key2&quot;</span>: <span class="string">&quot;value2&quot;</span>,</span><br><span class="line">    ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-<hr>
-</blockquote>
-<h2 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h2><blockquote>
-<ul>
-<li>append() 在被选元素的结尾插入内容；</li>
-<li>prepend() 在被选元素的开头插入内容；</li>
-<li>after() 在被选元素之后插入内容；</li>
-<li>before() 在被选元素之前插入内容。</li>
-</ul>
-<p>其中after和before可以接受无限数量的参数。</p>
-</blockquote>
-<h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2><blockquote>
-<ul>
-<li>remove() 将被选择元素连同其子元素一并删除，可以接受一个参数作为过滤器，删除被过滤出来的元素；</li>
-<li>empty() 清空被选择元素的子元素。</li>
-</ul>
-</blockquote>
-<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><blockquote>
-<ul>
-<li>addClass, removeClass, toggleClass() 接收参数将为选择元素增加/删除/轮换这些类。即改变class属性的内容；</li>
-<li>css() 单参，接收propertyname作为参数，返回其值，接收字典作为参数，修改对象的多个css属性(类似attr的语法)；双参修改这一属性的值。</li>
-</ul>
-</blockquote>
-<h2 id="尺寸"><a href="#尺寸" class="headerlink" title="尺寸"></a>尺寸</h2><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jquery/jquery_dimensions.asp">详见W3School：尺寸</a></p>
-<h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jquery/jquery_traversing.asp">详见W3School：遍历</a></p>
-</blockquote>
 <h1 id="VUE-Config"><a href="#VUE-Config" class="headerlink" title="VUE Config"></a>VUE Config</h1><blockquote>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>首先换一个国内的npm源。这里由于我已经换过了，所以这一步跳过。</p>
 <p>然后在终端输入：<code>cnpm i -g vue/cli</code>即可。</p>
@@ -643,12 +477,17 @@ height:50vh;
             <p>Author: <a href="http://endsieg77.github.io">Endsieg77</a>
             <p>Link: <a href="http://endsieg77.github.io/2021/01/18/4-F2E-WOC/">http://endsieg77.github.io/2021/01/18/4-F2E-WOC/</a>
             <p>Post on: <a href="http://endsieg77.github.io/2021/01/18/4-F2E-WOC/">January 18th 2021, 10:09:06 am</a>
-            <p>Update on: <a href="http://endsieg77.github.io/2021/01/18/4-F2E-WOC/">January 19th 2021, 1:21:45 am</a>
+            <p>Update on: <a href="http://endsieg77.github.io/2021/01/18/4-F2E-WOC/">January 19th 2021, 1:28:37 am</a>
         </div>
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2021/01/19/stdjQuery/" title= "jQuery基础回顾">
+                    <div class="nextTitle">jQuery基础回顾</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -791,7 +630,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JQuery-Config"><span class="toc-number">1.</span> <span class="toc-text">JQuery Config</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JQuery%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE"><span class="toc-number">2.</span> <span class="toc-text">JQuery基础回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Selector"><span class="toc-number">2.1.</span> <span class="toc-text">Selector</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Events"><span class="toc-number">2.2.</span> <span class="toc-text">Events</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.2.1.</span> <span class="toc-text">鼠标事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.2.2.</span> <span class="toc-text">键盘事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.2.3.</span> <span class="toc-text">表单事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.2.4.</span> <span class="toc-text">窗口事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chaining"><span class="toc-number">2.3.</span> <span class="toc-text">Chaining</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Effects"><span class="toc-number">2.4.</span> <span class="toc-text">Effects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%EF%BC%8C%E9%9A%90%E8%97%8F"><span class="toc-number">2.4.1.</span> <span class="toc-text">显示，隐藏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%A1%E5%85%A5%EF%BC%8C%E6%B7%A1%E5%87%BA"><span class="toc-number">2.4.2.</span> <span class="toc-text">淡入，淡出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8"><span class="toc-number">2.4.3.</span> <span class="toc-text">滑动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB"><span class="toc-number">2.4.4.</span> <span class="toc-text">动画</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Acquire-Contents-amp-Attributions"><span class="toc-number">2.5.</span> <span class="toc-text">Acquire Contents &amp; Attributions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"><span class="toc-number">2.6.</span> <span class="toc-text">添加元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-number">2.7.</span> <span class="toc-text">删除元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS"><span class="toc-number">2.8.</span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%BA%E5%AF%B8"><span class="toc-number">2.9.</span> <span class="toc-text">尺寸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%8D%E5%8E%86"><span class="toc-number">2.10.</span> <span class="toc-text">遍历</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VUE-Config"><span class="toc-number">3.</span> <span class="toc-text">VUE Config</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">3.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">3.2.</span> <span class="toc-text">初始化</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JQuery-Config"><span class="toc-number">1.</span> <span class="toc-text">JQuery Config</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VUE-Config"><span class="toc-number">2.</span> <span class="toc-text">VUE Config</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">2.2.</span> <span class="toc-text">初始化</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -1049,9 +888,24 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 21
+        Total : 22
         </div>
     </div>
     <!-- 音乐播放器 -->
@@ -1064,6 +918,11 @@ top:50vh;
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/19</span><a class="archive-post-title" href= "/2021/01/19/stdjQuery/" >jQuery基础回顾</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1212,6 +1071,8 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="warstory"><span class="iconfont-archer">&#xe606;</span>warstory</span>
     
+        <span class="sidebar-tag-name" data-tags="jQuery"><span class="iconfont-archer">&#xe606;</span>jQuery</span>
+    
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
@@ -1282,6 +1143,8 @@ jsonContent:
         <span class="sidebar-category-name" data-categories="Front-end"><span class="iconfont-archer">&#xe60a;</span>Front-end</span>
     
         <span class="sidebar-category-name" data-categories="Front-end/WOC"><span class="iconfont-archer">&#xe60a;</span>Front-end/WOC</span>
+    
+        <span class="sidebar-category-name" data-categories="F2E"><span class="iconfont-archer">&#xe60a;</span>F2E</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
