@@ -28,7 +28,7 @@
 <meta property="og:description" content="说是回顾但其实我昨天下午刚刚学过，今天复盘一下。也为了以后再次使用可以快速抓到重点。   Selector1$(&quot;tag.class&quot;).action() or: 1$(&quot;tag#id&quot;).action() 其中$是jQuery引入符，tag是html标签，class和id是标签属性中的名字。action()是某一事件。 特别地， 1$(document).">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-18T17:27:31.000Z">
-<meta property="article:modified_time" content="2021-01-18T17:43:43.577Z">
+<meta property="article:modified_time" content="2021-01-19T23:47:56.954Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="jQuery">
 <meta name="twitter:card" content="summary">
@@ -626,6 +626,31 @@ $(selector).attr(&#123;
 </blockquote>
 <h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><hr>
 <p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jquery/jquery_traversing.asp">详见W3School：遍历</a></p>
+<hr>
+<h2 id="AJAX-Asychronized-Javascript-and-XML"><a href="#AJAX-Asychronized-Javascript-and-XML" class="headerlink" title="AJAX(Asychronized Javascript and XML)"></a>AJAX(Asychronized Javascript and XML)</h2><blockquote>
+<p>简单来说，就是在不重载页面的情况下调各种接口来改变页面内容。</p>
+<hr>
+<h3 id="load"><a href="#load" class="headerlink" title="load()"></a>load()</h3><hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).load(URL, data, callback);</span><br></pre></td></tr></table></figure>
+<p>将URL文件中的内容放入选择器中，其中URL也可以是这样的形式：”文件URL 选择器”，来从文件中筛选某些特定标签的成分。</p>
+<p>data存有请求的状态</p>
+<p>callback常用参数：</p>
+<ul>
+<li><em>responseTxt</em> - 包含调用成功时的结果内容</li>
+<li><em>statusTXT</em> - 包含调用的状态</li>
+<li><em>xhr</em> - 包含 XMLHttpRequest 对象，该对象常用status和statusText两个属性。</li>
+</ul>
+<hr>
+<h3 id="get-post"><a href="#get-post" class="headerlink" title="$.get(), $.post()"></a>$.get(), $.post()</h3><hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.get, post(URL, data, callback)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>get以GET方法从服务器获取数据。</p>
+</li>
+<li><p>post以POST方法向服务器上传数据。</p>
+</li>
+</ul>
+<p>data存有请求的状态。</p>
+</blockquote>
 </blockquote>
 
     </article>
@@ -635,7 +660,7 @@ $(selector).attr(&#123;
             <p>Author: <a href="http://endsieg77.github.io">Endsieg77</a>
             <p>Link: <a href="http://endsieg77.github.io/2021/01/19/stdjQuery/">http://endsieg77.github.io/2021/01/19/stdjQuery/</a>
             <p>Post on: <a href="http://endsieg77.github.io/2021/01/19/stdjQuery/">January 19th 2021, 1:27:31 am</a>
-            <p>Update on: <a href="http://endsieg77.github.io/2021/01/19/stdjQuery/">January 19th 2021, 1:43:43 am</a>
+            <p>Update on: <a href="http://endsieg77.github.io/2021/01/19/stdjQuery/">January 20th 2021, 7:47:56 am</a>
         </div>
     
     <!-- paginator  -->
@@ -783,7 +808,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Selector"><span class="toc-number">1.</span> <span class="toc-text">Selector</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Events"><span class="toc-number">2.</span> <span class="toc-text">Events</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.1.</span> <span class="toc-text">鼠标事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.2.</span> <span class="toc-text">键盘事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.3.</span> <span class="toc-text">表单事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.4.</span> <span class="toc-text">窗口事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chaining"><span class="toc-number">3.</span> <span class="toc-text">Chaining</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Effects"><span class="toc-number">4.</span> <span class="toc-text">Effects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%EF%BC%8C%E9%9A%90%E8%97%8F"><span class="toc-number">4.1.</span> <span class="toc-text">显示，隐藏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%A1%E5%85%A5%EF%BC%8C%E6%B7%A1%E5%87%BA"><span class="toc-number">4.2.</span> <span class="toc-text">淡入，淡出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8"><span class="toc-number">4.3.</span> <span class="toc-text">滑动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB"><span class="toc-number">4.4.</span> <span class="toc-text">动画</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">5.</span> <span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Acquire-Contents-amp-Attributions"><span class="toc-number">5.1.</span> <span class="toc-text">Acquire Contents &amp; Attributions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"><span class="toc-number">5.2.</span> <span class="toc-text">添加元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-number">5.3.</span> <span class="toc-text">删除元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-number">5.4.</span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%BA%E5%AF%B8"><span class="toc-number">5.5.</span> <span class="toc-text">尺寸</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%8D%E5%8E%86"><span class="toc-number">6.</span> <span class="toc-text">遍历</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Selector"><span class="toc-number">1.</span> <span class="toc-text">Selector</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Events"><span class="toc-number">2.</span> <span class="toc-text">Events</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.1.</span> <span class="toc-text">鼠标事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.2.</span> <span class="toc-text">键盘事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.3.</span> <span class="toc-text">表单事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.4.</span> <span class="toc-text">窗口事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chaining"><span class="toc-number">3.</span> <span class="toc-text">Chaining</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Effects"><span class="toc-number">4.</span> <span class="toc-text">Effects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%EF%BC%8C%E9%9A%90%E8%97%8F"><span class="toc-number">4.1.</span> <span class="toc-text">显示，隐藏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%A1%E5%85%A5%EF%BC%8C%E6%B7%A1%E5%87%BA"><span class="toc-number">4.2.</span> <span class="toc-text">淡入，淡出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8"><span class="toc-number">4.3.</span> <span class="toc-text">滑动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB"><span class="toc-number">4.4.</span> <span class="toc-text">动画</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">5.</span> <span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Acquire-Contents-amp-Attributions"><span class="toc-number">5.1.</span> <span class="toc-text">Acquire Contents &amp; Attributions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"><span class="toc-number">5.2.</span> <span class="toc-text">添加元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-number">5.3.</span> <span class="toc-text">删除元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-number">5.4.</span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%BA%E5%AF%B8"><span class="toc-number">5.5.</span> <span class="toc-text">尺寸</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%8D%E5%8E%86"><span class="toc-number">6.</span> <span class="toc-text">遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AJAX-Asychronized-Javascript-and-XML"><span class="toc-number">7.</span> <span class="toc-text">AJAX(Asychronized Javascript and XML)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#load"><span class="toc-number">7.1.</span> <span class="toc-text">load()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#get-post"><span class="toc-number">7.2.</span> <span class="toc-text">$.get(), $.post()</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
