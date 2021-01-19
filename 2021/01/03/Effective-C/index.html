@@ -20,16 +20,16 @@
     <meta name="keywords" content="Offensive77,Endsieg77,Blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Introduction View C++ as a federation of Languages​    In Scott Meyer’s opinions, Modern C++ supports different paradigms of programming, including C, Object-Oriented C++, Template C++(with its byprod">
+    <meta name="description" content="Introduction  View C++ as a federation of Languages​    In Scott Meyer’s opinions, Modern C++ supports different paradigms of programming, including C, Object-Oriented C++, Template C++(with its bypro">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Effective C++">
 <meta property="og:url" content="http://endsieg77.github.io/2021/01/03/Effective-C/index.html">
 <meta property="og:site_name" content="Endsieg77&#39;s Studio">
-<meta property="og:description" content="Introduction View C++ as a federation of Languages​    In Scott Meyer’s opinions, Modern C++ supports different paradigms of programming, including C, Object-Oriented C++, Template C++(with its byprod">
+<meta property="og:description" content="Introduction  View C++ as a federation of Languages​    In Scott Meyer’s opinions, Modern C++ supports different paradigms of programming, including C, Object-Oriented C++, Template C++(with its bypro">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://endsieg77.github.io/images/hana_noa.jpg">
 <meta property="article:published_time" content="2021-01-02T18:01:15.000Z">
-<meta property="article:modified_time" content="2021-01-19T04:53:40.207Z">
+<meta property="article:modified_time" content="2021-01-19T04:55:21.387Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="utilities">
 <meta name="twitter:card" content="summary">
@@ -441,27 +441,48 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><blockquote>
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><hr>
+<blockquote>
 <h2 id="View-C-as-a-federation-of-Languages"><a href="#View-C-as-a-federation-of-Languages" class="headerlink" title="View C++ as a federation of Languages"></a>View C++ as a federation of Languages</h2><p>​    In Scott Meyer’s opinions, Modern C++ supports different paradigms of programming, including <code>C</code>, <code>Object-Oriented C++</code>, <code>Template C++</code>(with its byproduct of <code>C++ Template Meta Programming</code>, short for <code>CTMP</code>) and <code>STL</code>.</p>
+</blockquote>
+<hr>
+<blockquote>
 <h2 id="The-Enum-Hack"><a href="#The-Enum-Hack" class="headerlink" title="The Enum Hack"></a>The Enum Hack</h2><p>​    e.g.</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GamePlayer</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"> <span class="class"><span class="keyword">enum</span> &#123;</span> NumTurns = <span class="number">5</span> &#125;;  <span class="comment">// To make &quot;NumTurns&quot;</span></span><br><span class="line">                          <span class="comment">// a mark name of 5.</span></span><br><span class="line"> <span class="keyword">int</span> scores[NumTurns];    <span class="comment">// That would be alright.</span></span><br><span class="line"></span><br><span class="line"> ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>Enum Hack可以替代宏定义常量，实现几乎相近的行为。没有名字的enum在编译时直接被编译器替换，不占用额外的内存。可以说是非常经济实惠的做法。(Enum Hack在C中也可以运用)</p>
+</blockquote>
+<hr>
+<blockquote>
 <h2 id="Overload-the-function-with-different-constness"><a href="#Overload-the-function-with-different-constness" class="headerlink" title="Overload the function with different constness"></a>Overload the function with different constness</h2><p>​    We always neglect the fact that two member functions with different constness can be overloaded.</p>
 <p>​    e.g.</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a template class of Array:</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> _<span class="title">Ty</span>, <span class="title">size_t</span> _<span class="title">Size</span>&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span></span></span><br><span class="line"><span class="class">    <span class="title">Array</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	...</span><br><span class="line">    <span class="keyword">typedef</span> _Ty&amp;                                    reference;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">const</span> _Ty&amp;                        const_reference;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    </span><br><span class="line">	...</span><br><span class="line">    const_reference  <span class="keyword">operator</span>[](<span class="keyword">const</span> <span class="keyword">size_t</span>&amp;) <span class="keyword">const</span> <span class="keyword">noexcept</span>;</span><br><span class="line">    reference        <span class="keyword">operator</span>[](<span class="keyword">const</span> <span class="keyword">size_t</span>&amp;)       <span class="keyword">noexcept</span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	...</span><br><span class="line">&#125;; </span><br><span class="line"></span><br><span class="line"><span class="comment">// const version of operator[]:</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> _<span class="title">Ty</span>, <span class="title">size_t</span> _<span class="title">Size</span>&gt;</span></span><br><span class="line"><span class="keyword">inline</span></span><br><span class="line"><span class="keyword">typename</span> Array&lt;_Ty, _Size&gt;::const_reference</span><br><span class="line">    Array&lt;_Ty, _Size&gt;::<span class="keyword">operator</span>[](<span class="keyword">const</span> <span class="keyword">size_t</span> &amp;__index) <span class="keyword">const</span> <span class="keyword">noexcept</span></span><br><span class="line">&#123; <span class="keyword">return</span> *(begin() + __index); &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// non-const version of operator[]:</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> _<span class="title">Ty</span>, <span class="title">size_t</span> _<span class="title">Size</span>&gt;</span></span><br><span class="line"><span class="keyword">inline</span></span><br><span class="line"><span class="keyword">typename</span> Array&lt;_Ty, _Size&gt;::reference</span><br><span class="line">    Array&lt;_Ty, _Size&gt;::<span class="keyword">operator</span>[](<span class="keyword">const</span> <span class="keyword">size_t</span> &amp;__index) <span class="keyword">noexcept</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">const_cast</span>&lt;_Ty&amp;&gt;( <span class="comment">// cast away the constness;</span></span><br><span class="line">        <span class="keyword">static_cast</span>&lt;<span class="keyword">const</span> Array&amp;&gt;(*<span class="keyword">this</span>)  <span class="comment">// cast *this into a const</span></span><br><span class="line">            [__index]                     <span class="comment">// reference to call the</span></span><br><span class="line">    );									  <span class="comment">// const version of operator[];</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Use <code>mutable</code> to change member variables at will.</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a template class of Array:</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> _<span class="title">Ty</span>, <span class="title">size_t</span> _<span class="title">Size</span>&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span></span></span><br><span class="line"><span class="class">    <span class="title">Array</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	...</span><br><span class="line">    <span class="keyword">typedef</span> _Ty&amp;                                    reference;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">const</span> _Ty&amp;                        const_reference;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    </span><br><span class="line">	...</span><br><span class="line">    const_reference  <span class="keyword">operator</span>[](<span class="keyword">const</span> <span class="keyword">size_t</span>&amp;) <span class="keyword">const</span> <span class="keyword">noexcept</span>;</span><br><span class="line">    reference        <span class="keyword">operator</span>[](<span class="keyword">const</span> <span class="keyword">size_t</span>&amp;)       <span class="keyword">noexcept</span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	...</span><br><span class="line">&#125;; </span><br><span class="line"></span><br><span class="line"><span class="comment">// const version of operator[]:</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> _<span class="title">Ty</span>, <span class="title">size_t</span> _<span class="title">Size</span>&gt;</span></span><br><span class="line"><span class="keyword">inline</span></span><br><span class="line"><span class="keyword">typename</span> Array&lt;_Ty, _Size&gt;::const_reference</span><br><span class="line">    Array&lt;_Ty, _Size&gt;::<span class="keyword">operator</span>[](<span class="keyword">const</span> <span class="keyword">size_t</span> &amp;__index) <span class="keyword">const</span> <span class="keyword">noexcept</span></span><br><span class="line">&#123; <span class="keyword">return</span> *(begin() + __index); &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// non-const version of operator[]:</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> _<span class="title">Ty</span>, <span class="title">size_t</span> _<span class="title">Size</span>&gt;</span></span><br><span class="line"><span class="keyword">inline</span></span><br><span class="line"><span class="keyword">typename</span> Array&lt;_Ty, _Size&gt;::reference</span><br><span class="line">    Array&lt;_Ty, _Size&gt;::<span class="keyword">operator</span>[](<span class="keyword">const</span> <span class="keyword">size_t</span> &amp;__index) <span class="keyword">noexcept</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">const_cast</span>&lt;_Ty&amp;&gt;( <span class="comment">// cast away the constness;</span></span><br><span class="line">        <span class="keyword">static_cast</span>&lt;<span class="keyword">const</span> Array&amp;&gt;(*<span class="keyword">this</span>)  <span class="comment">// cast *this into a const</span></span><br><span class="line">            [__index]                     <span class="comment">// reference to call the</span></span><br><span class="line">    );									  <span class="comment">// const version of operator[];</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2><p>Use <code>mutable</code> to change member variables at will.</p>
+</blockquote>
+<hr>
+<blockquote>
 <p>Assign the similar initialization tasks to member functions declared <code>private</code><br>or <code>delegation constructors</code> to avoid the mechanical repetition of codes.</p>
-<h2 id="Realize-simple-singleton-by"><a href="#Realize-simple-singleton-by" class="headerlink" title="Realize simple singleton by:"></a>Realize simple <code>singleton</code> by:</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Obj &amp;<span class="title">SingletonFact</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> Obj object &#123;params&#125;;</span><br><span class="line">    <span class="keyword">return</span> object; <span class="comment">// return the handle of object</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<h1 id="Constructor-Destructor-Assignment"><a href="#Constructor-Destructor-Assignment" class="headerlink" title="Constructor, Destructor, Assignment"></a>Constructor, Destructor, Assignment</h1><blockquote>
+<hr>
+<blockquote>
+<h2 id="Realize-simple-singleton-by"><a href="#Realize-simple-singleton-by" class="headerlink" title="Realize simple singleton by:"></a>Realize simple <code>singleton</code> by:</h2><h2 id="-1"><a href="#-1" class="headerlink" title=""></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Obj &amp;<span class="title">SingletonFact</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> Obj object &#123;params&#125;;</span><br><span class="line">    <span class="keyword">return</span> object; <span class="comment">// return the handle of object</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2></blockquote>
+<h1 id="Constructor-Destructor-Assignment"><a href="#Constructor-Destructor-Assignment" class="headerlink" title="Constructor, Destructor, Assignment"></a>Constructor, Destructor, Assignment</h1><hr>
+<blockquote>
 <h2 id="Forbid-the-unwilled-operations"><a href="#Forbid-the-unwilled-operations" class="headerlink" title="Forbid the unwilled operations"></a>Forbid the unwilled operations</h2><p>​    Add an <code>= delete</code> at the end of the function to forbid the call of them.(After <code>C++11</code>)</p>
-<h2 id="EBO-To-Be-Continued"><a href="#EBO-To-Be-Continued" class="headerlink" title="EBO(To Be Continued)"></a>EBO(<strong><em>To Be Continued</em></strong>)</h2><h2 id="Don’t-declare-function-as-virtual-if-unnecessary"><a href="#Don’t-declare-function-as-virtual-if-unnecessary" class="headerlink" title="Don’t declare function as virtual if unnecessary"></a>Don’t declare function as virtual if unnecessary</h2><p>​    Object must contain some information to judge which version of function to be called,</p>
-<p>​    This information is usually pointed out by a pointer called <code>vptr(virtural table pointer)</code> which points an array made up of function pointers, called <code>vtbl(virtual table)</code>, which causes the expansion of the size of objects.</p>
-<h2 id="Pure-Virtual-Function-makes-the-class-abstract"><a href="#Pure-Virtual-Function-makes-the-class-abstract" class="headerlink" title="Pure Virtual Function makes the class abstract"></a>Pure Virtual Function makes the class abstract</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span> &#123;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">virtual</span> ~Sample() = <span class="number">0</span>;  <span class="comment">// Sample cannot be instantiated now.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Sample::~Sample() &#123; &#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="Never-call-a-virtual-function-when-the-object-has-not-been-initialized"><a href="#Never-call-a-virtual-function-when-the-object-has-not-been-initialized" class="headerlink" title="Never call a virtual function when the object has not been initialized"></a>Never call a virtual function when the object has not been initialized</h2><p>​    We can memorize it by a recipe: “Virtual function is not a virtual function, when the object is under construction.” Basically, the call of virtual function in this section violates the principles of <code>runtime polymorphism</code>.</p>
-<h2 id="Use-Identity-Test-to-avoid-the-self-assignment"><a href="#Use-Identity-Test-to-avoid-the-self-assignment" class="headerlink" title="Use Identity Test to avoid the self-assignment"></a>Use <code>Identity Test</code> to avoid the self-assignment</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Widget &amp;Widget::<span class="keyword">operator</span>=(<span class="keyword">const</span> Widget &amp;rhs) &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span> == &amp;rhs) <span class="keyword">return</span> *<span class="keyword">this</span>;  <span class="comment">// Identity Test.</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">delete</span> pb;  <span class="comment">// pb is a member of Widget which points a Bitmap;</span></span><br><span class="line">    pb = <span class="keyword">new</span> Bitmap(*rhs.pb);</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="copy-and-swap-strategy-may-function-well"><a href="#copy-and-swap-strategy-may-function-well" class="headerlink" title="copy-and-swap strategy may function well"></a><code>copy-and-swap</code> strategy may function well</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Widget &amp;Widget::<span class="keyword">operator</span>=(<span class="keyword">const</span> Widget &amp;rhs) &#123;</span><br><span class="line">    Widget temp(rhs);</span><br><span class="line">    swap(temp);</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
+<hr>
+<blockquote>
+<h2 id="EBO-To-Be-Continued"><a href="#EBO-To-Be-Continued" class="headerlink" title="EBO(To Be Continued)"></a>EBO(<strong><em>To Be Continued</em></strong>)</h2></blockquote>
+<hr>
+<blockquote>
+<h2 id="Don’t-declare-function-as-virtual-if-unnecessary"><a href="#Don’t-declare-function-as-virtual-if-unnecessary" class="headerlink" title="Don’t declare function as virtual if unnecessary"></a>Don’t declare function as virtual if unnecessary</h2><p>​    Object must contain some information to judge which version of function to be called,</p>
+<p>​    This information is usually pointed out by a pointer called <code>vptr(virtural table pointer)</code> which points an array made up of function pointers, called <code>vtbl(virtual table)</code>, which causes the expansion of the size of objects.</p>
+</blockquote>
+<hr>
+<blockquote>
+<h2 id="Pure-Virtual-Function-makes-the-class-abstract"><a href="#Pure-Virtual-Function-makes-the-class-abstract" class="headerlink" title="Pure Virtual Function makes the class abstract"></a>Pure Virtual Function makes the class abstract</h2><h2 id="-2"><a href="#-2" class="headerlink" title=""></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span> &#123;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">virtual</span> ~Sample() = <span class="number">0</span>;  <span class="comment">// Sample cannot be instantiated now.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Sample::~Sample() &#123; &#125;;</span><br></pre></td></tr></table></figure></h2><h2 id="Never-call-a-virtual-function-when-the-object-has-not-been-initialized"><a href="#Never-call-a-virtual-function-when-the-object-has-not-been-initialized" class="headerlink" title="Never call a virtual function when the object has not been initialized"></a>Never call a virtual function when the object has not been initialized</h2><p>​    We can memorize it by a recipe: “Virtual function is not a virtual function, when the object is under construction.” Basically, the call of virtual function in this section violates the principles of <code>runtime polymorphism</code>.</p>
+</blockquote>
+<hr>
+<blockquote>
+<h2 id="Use-Identity-Test-to-avoid-the-self-assignment"><a href="#Use-Identity-Test-to-avoid-the-self-assignment" class="headerlink" title="Use Identity Test to avoid the self-assignment"></a>Use <code>Identity Test</code> to avoid the self-assignment</h2><h2 id="-3"><a href="#-3" class="headerlink" title=""></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Widget &amp;Widget::<span class="keyword">operator</span>=(<span class="keyword">const</span> Widget &amp;rhs) &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span> == &amp;rhs) <span class="keyword">return</span> *<span class="keyword">this</span>;  <span class="comment">// Identity Test.</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">delete</span> pb;  <span class="comment">// pb is a member of Widget which points a Bitmap;</span></span><br><span class="line">    pb = <span class="keyword">new</span> Bitmap(*rhs.pb);</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2><h2 id="copy-and-swap-strategy-may-function-well"><a href="#copy-and-swap-strategy-may-function-well" class="headerlink" title="copy-and-swap strategy may function well"></a><code>copy-and-swap</code> strategy may function well</h2><h2 id="-4"><a href="#-4" class="headerlink" title=""></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Widget &amp;Widget::<span class="keyword">operator</span>=(<span class="keyword">const</span> Widget &amp;rhs) &#123;</span><br><span class="line">    Widget temp(rhs);</span><br><span class="line">    swap(temp);</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></h2></blockquote>
 <h1 id="Resource-Management"><a href="#Resource-Management" class="headerlink" title="Resource Management"></a>Resource Management</h1><blockquote>
 <h2 id="Smart-Pointer"><a href="#Smart-Pointer" class="headerlink" title="Smart Pointer"></a>Smart Pointer</h2><p>下面是一个工厂函数：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Investment *<span class="title">createInvestment</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
@@ -478,6 +499,9 @@ height:50vh;
 <p>pa想要被析构，但pa的引用仍然被pb所指对象所把持，导致pa无法被析构。而pb也是如此，无法被正常析构。</p>
 <p>我们只要把其中一个<code>shared_ptr</code>替换成<code>weak_ptr</code>即可。<code>weak_ptr</code>不具备资源管理的能力，其只提供了一个<code>expired()</code>接口检测资源是否被释放。</p>
 </blockquote>
+</blockquote>
+<hr>
+<blockquote>
 <h2 id="A-Class-Intended-for-Resource-Management"><a href="#A-Class-Intended-for-Resource-Management" class="headerlink" title="A Class Intended for Resource Management"></a>A Class Intended for Resource Management</h2><p><strong>Two Critical Criterion:</strong></p>
 <ul>
 <li>RAII， 获得资源后立刻放入资源管理对象。</li>
@@ -493,7 +517,7 @@ height:50vh;
             <p>Author: <a href="http://endsieg77.github.io">Endsieg77</a>
             <p>Link: <a href="http://endsieg77.github.io/2021/01/03/Effective-C/">http://endsieg77.github.io/2021/01/03/Effective-C/</a>
             <p>Post on: <a href="http://endsieg77.github.io/2021/01/03/Effective-C/">January 3rd 2021, 2:01:15 am</a>
-            <p>Update on: <a href="http://endsieg77.github.io/2021/01/03/Effective-C/">January 19th 2021, 12:53:40 pm</a>
+            <p>Update on: <a href="http://endsieg77.github.io/2021/01/03/Effective-C/">January 19th 2021, 12:55:21 pm</a>
         </div>
     
     <!-- paginator  -->
@@ -646,7 +670,121 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#View-C-as-a-federation-of-Languages"><span class="toc-number">1.1.</span> <span class="toc-text">View C++ as a federation of Languages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Enum-Hack"><span class="toc-number">1.2.</span> <span class="toc-text">The Enum Hack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Overload-the-function-with-different-constness"><span class="toc-number">1.3.</span> <span class="toc-text">Overload the function with different constness</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Realize-simple-singleton-by"><span class="toc-number">1.4.</span> <span class="toc-text">Realize simple singleton by:</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Constructor-Destructor-Assignment"><span class="toc-number">2.</span> <span class="toc-text">Constructor, Destructor, Assignment</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Forbid-the-unwilled-operations"><span class="toc-number">2.1.</span> <span class="toc-text">Forbid the unwilled operations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EBO-To-Be-Continued"><span class="toc-number">2.2.</span> <span class="toc-text">EBO(To Be Continued)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Don%E2%80%99t-declare-function-as-virtual-if-unnecessary"><span class="toc-number">2.3.</span> <span class="toc-text">Don’t declare function as virtual if unnecessary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pure-Virtual-Function-makes-the-class-abstract"><span class="toc-number">2.4.</span> <span class="toc-text">Pure Virtual Function makes the class abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Never-call-a-virtual-function-when-the-object-has-not-been-initialized"><span class="toc-number">2.5.</span> <span class="toc-text">Never call a virtual function when the object has not been initialized</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-Identity-Test-to-avoid-the-self-assignment"><span class="toc-number">2.6.</span> <span class="toc-text">Use Identity Test to avoid the self-assignment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#copy-and-swap-strategy-may-function-well"><span class="toc-number">2.7.</span> <span class="toc-text">copy-and-swap strategy may function well</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Resource-Management"><span class="toc-number">3.</span> <span class="toc-text">Resource Management</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Smart-Pointer"><span class="toc-number">3.1.</span> <span class="toc-text">Smart Pointer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Circular-Reference"><span class="toc-number">3.1.1.</span> <span class="toc-text">Circular Reference</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Class-Intended-for-Resource-Management"><span class="toc-number">3.2.</span> <span class="toc-text">A Class Intended for Resource Management</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#View-C-as-a-federation-of-Languages"><span class="toc-number">1.1.</span> <span class="toc-text">View C++ as a federation of Languages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Enum-Hack"><span class="toc-number">1.2.</span> <span class="toc-text">The Enum Hack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Overload-the-function-with-different-constness"><span class="toc-number">1.3.</span> <span class="toc-text">Overload the function with different constness</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.4.</span> <span class="toc-text">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+&#x2F;&#x2F; a template class of Array:
+template&lt;class _Ty, size_t _Size&gt;
+class
+    Array
+&amp;#123;
+	...
+    typedef _Ty&amp;                                    reference;
+    typedef const _Ty&amp;                        const_reference;
+public:
+    
+	...
+    const_reference  operator[](const size_t&amp;) const noexcept;
+    reference        operator[](const size_t&amp;)       noexcept;
+private:
+	...
+&amp;#125;; 
+
+&#x2F;&#x2F; const version of operator[]:
+template&lt;class _Ty, size_t _Size&gt;
+inline
+typename Array&lt;_Ty, _Size&gt;::const_reference
+    Array&lt;_Ty, _Size&gt;::operator[](const size_t &amp;__index) const noexcept
+&amp;#123; return *(begin() + __index); &amp;#125;
+
+&#x2F;&#x2F; non-const version of operator[]:
+template&lt;class _Ty, size_t _Size&gt;
+inline
+typename Array&lt;_Ty, _Size&gt;::reference
+    Array&lt;_Ty, _Size&gt;::operator[](const size_t &amp;__index) noexcept
+&amp;#123;
+    return const_cast&lt;_Ty&amp;&gt;( &#x2F;&#x2F; cast away the constness;
+        static_cast&lt;const Array&amp;&gt;(*this)  &#x2F;&#x2F; cast *this into a const
+            [__index]                     &#x2F;&#x2F; reference to call the
+    );									  &#x2F;&#x2F; const version of operator[];
+&amp;#125;
+</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Realize-simple-singleton-by"><span class="toc-number">1.5.</span> <span class="toc-text">Realize simple singleton by:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-number">1.6.</span> <span class="toc-text">1
+2
+3
+4
+Obj &amp;SingletonFact() &amp;#123;
+    static Obj object &amp;#123;params&amp;#125;;
+    return object; &#x2F;&#x2F; return the handle of object
+&amp;#125;
+</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Constructor-Destructor-Assignment"><span class="toc-number">2.</span> <span class="toc-text">Constructor, Destructor, Assignment</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Forbid-the-unwilled-operations"><span class="toc-number">2.1.</span> <span class="toc-text">Forbid the unwilled operations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EBO-To-Be-Continued"><span class="toc-number">2.2.</span> <span class="toc-text">EBO(To Be Continued)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Don%E2%80%99t-declare-function-as-virtual-if-unnecessary"><span class="toc-number">2.3.</span> <span class="toc-text">Don’t declare function as virtual if unnecessary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pure-Virtual-Function-makes-the-class-abstract"><span class="toc-number">2.4.</span> <span class="toc-text">Pure Virtual Function makes the class abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-2"><span class="toc-number">2.5.</span> <span class="toc-text">1
+2
+3
+4
+5
+6
+class Sample &amp;#123;
+    ...
+    virtual ~Sample() &#x3D; 0;  &#x2F;&#x2F; Sample cannot be instantiated now.
+&amp;#125;
+
+Sample::~Sample() &amp;#123; &amp;#125;;
+</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Never-call-a-virtual-function-when-the-object-has-not-been-initialized"><span class="toc-number">2.6.</span> <span class="toc-text">Never call a virtual function when the object has not been initialized</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-Identity-Test-to-avoid-the-self-assignment"><span class="toc-number">2.7.</span> <span class="toc-text">Use Identity Test to avoid the self-assignment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-3"><span class="toc-number">2.8.</span> <span class="toc-text">1
+2
+3
+4
+5
+6
+7
+Widget &amp;Widget::operator&#x3D;(const Widget &amp;rhs) &amp;#123;
+    if(this &#x3D;&#x3D; &amp;rhs) return *this;  &#x2F;&#x2F; Identity Test.
+    
+    delete pb;  &#x2F;&#x2F; pb is a member of Widget which points a Bitmap;
+    pb &#x3D; new Bitmap(*rhs.pb);
+    return *this;
+&amp;#125;
+</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#copy-and-swap-strategy-may-function-well"><span class="toc-number">2.9.</span> <span class="toc-text">copy-and-swap strategy may function well</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-4"><span class="toc-number">2.10.</span> <span class="toc-text">1
+2
+3
+4
+5
+Widget &amp;Widget::operator&#x3D;(const Widget &amp;rhs) &amp;#123;
+    Widget temp(rhs);
+    swap(temp);
+    return *this;
+&amp;#125;
+</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Resource-Management"><span class="toc-number">3.</span> <span class="toc-text">Resource Management</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Smart-Pointer"><span class="toc-number">3.1.</span> <span class="toc-text">Smart Pointer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Circular-Reference"><span class="toc-number">3.1.1.</span> <span class="toc-text">Circular Reference</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Class-Intended-for-Resource-Management"><span class="toc-number">3.2.</span> <span class="toc-text">A Class Intended for Resource Management</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -1216,12 +1354,7 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;
-    i
-    < all.length; ++i) all[i].SourceElement().parentNode.className +=' has-jax' ; }); </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+    </body>
 </html>
 
 
