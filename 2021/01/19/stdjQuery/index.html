@@ -28,7 +28,7 @@
 <meta property="og:description" content="说是回顾但其实我昨天下午刚刚学过，今天复盘一下。也为了以后再次使用可以快速抓到重点。 Basic Knowledge  Selector1$(&quot;tag.class&quot;).action() or: 1$(&quot;tag#id&quot;).action() 其中$是jQuery引入符，tag是html标签，class和id是标签属性中的名字。action()是某一事件。 特别地">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-18T17:27:31.000Z">
-<meta property="article:modified_time" content="2021-01-22T12:24:58.980Z">
+<meta property="article:modified_time" content="2021-01-22T12:29:21.291Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="jQuery">
 <meta name="twitter:card" content="summary">
@@ -508,20 +508,20 @@ height:50vh;
 <h3 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h3><hr>
 <p>一般对input等添加。</p>
 <ul>
-<li><p>submit()在提交后被执行。</p>
+<li><p><code>submit()</code>在提交后被执行。</p>
 </li>
-<li><p>change()在被改变后执行。</p>
+<li><p><code>change()</code>在被改变后执行。</p>
 </li>
-<li><p>focus()在被选中时执行。</p>
+<li><p><code>focus()</code>在被选中时执行。</p>
 </li>
 </ul>
 <blockquote>
 <p>一个特殊用法：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).focus().action()</span><br></pre></td></tr></table></figure>
-<p>由于selector被聚焦时，focus()始终处于触发状态，action()不会被触发，而当selector失去焦点，则触发action()。action()可以是fadeOut()等。</p>
+<p>由于selector被聚焦时，focus()始终处于触发状态，action()不会被触发，而当selector失去焦点，则触发action()。action()可以是<code>fadeOut()</code>等。</p>
 </blockquote>
 <ul>
-<li>blur()则在not focus时执行。</li>
+<li><code>blur()</code>则在not focus时执行。</li>
 </ul>
 <hr>
 <h3 id="窗口事件"><a href="#窗口事件" class="headerlink" title="窗口事件"></a>窗口事件</h3><hr>
@@ -538,16 +538,16 @@ height:50vh;
 <blockquote>
 <h3 id="显示，隐藏"><a href="#显示，隐藏" class="headerlink" title="显示，隐藏"></a>显示，隐藏</h3><hr>
 <ul>
-<li>hide(), show() 字面意思。</li>
-<li>toggle(speed, callback) 可以用来切换hide()和show()，speed为速度，speed可以是”slow”, “fast”, 毫秒，callback为每次执行后的回调函数。注意，每个被选择的标签都会执行一次回调函数。</li>
+<li><code>hide()</code>, <code>show()</code> 字面意思。</li>
+<li><code>toggle(speed, callback)</code> 可以用来切换<code>hide()</code>和<code>show()</code>，speed为速度，speed可以是”slow”, “fast”, 毫秒，callback为每次执行后的回调函数。注意，每个被选择的标签都会执行一次回调函数。</li>
 </ul>
 <hr>
 <h3 id="淡入，淡出"><a href="#淡入，淡出" class="headerlink" title="淡入，淡出"></a>淡入，淡出</h3><hr>
 <ul>
-<li><p>fadeIn, fadeOut, fadeToggle (speed, callback) </p>
+<li><p><code>fadeIn</code>, <code>fadeOut</code>, <code>fadeToggle</code> (speed, callback) </p>
 </li>
-<li><p>fadeTo将元素转为某一不透明度(0~1)。</p>
-<p>$(selector).fadeTo(speed,opacity,callback);</p>
+<li><p><code>fadeTo</code>将元素转为某一不透明度(0~1)。</p>
+<p><code>$(selector).fadeTo(speed,opacity,callback);</code></p>
 </li>
 </ul>
 <hr>
@@ -564,16 +564,16 @@ height:50vh;
 <hr>
 <h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="Acquire-Contents-amp-Attributions"><a href="#Acquire-Contents-amp-Attributions" class="headerlink" title="Acquire Contents &amp; Attributions"></a>Acquire Contents &amp; Attributions</h3><blockquote>
 <ul>
-<li><p>text() 获取或修改文本内容，无参为获取，有参为修改；</p>
+<li><p><code>text()</code>获取或修改文本内容，无参为获取，有参为修改；</p>
 </li>
-<li><p>html() 获取或修改带html标签的文本内容；</p>
+<li><p><code>html()</code>获取或修改带html标签的文本内容；</p>
 </li>
-<li><p>val() 获取或修改表单的值。</p>
+<li><p><code>val()</code>获取或修改表单的值。</p>
 </li>
 <li><p>上面三种方法的回调函数：</p>
 <p>摘自W3School：<code>上面的三个 jQuery 方法：text()、html() 以及 val()，同样拥有回调函数。回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。</code><br><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tiy/t.asp?f=jquery_dom_html_callback">实例</a></p>
 </li>
-<li><p>attr()</p>
+<li><p><code>attr()</code></p>
 <blockquote>
 <ol>
 <li>对类似<code>&lt;a href=&quot;#&quot;&gt; &lt;/a&gt;</code>这样的，如果要得到其href，只需将attr的参数传为”href”即可。</li>
@@ -630,7 +630,7 @@ $(selector).attr(&#123;
 <h2 id="AJAX-Asychronized-Javascript-and-XML"><a href="#AJAX-Asychronized-Javascript-and-XML" class="headerlink" title="AJAX(Asychronized Javascript and XML)"></a>AJAX(Asychronized Javascript and XML)</h2><blockquote>
 <p>简单来说，就是在不重载页面的情况下调各种接口来改变页面内容。</p>
 <hr>
-<h3 id="load"><a href="#load" class="headerlink" title="load()"></a>load()</h3><hr>
+<h3 id="load"><a href="#load" class="headerlink" title="load()"></a><code>load()</code></h3><hr>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).load(URL, data, callback);</span><br></pre></td></tr></table></figure>
 <p>将URL文件中的内容放入选择器中，其中URL也可以是这样的形式：”文件URL 选择器”，来从文件中筛选某些特定标签的成分。</p>
 <p>data存有请求的状态</p>
@@ -641,7 +641,7 @@ $(selector).attr(&#123;
 <li><em>xhr</em> - 包含 XMLHttpRequest 对象，该对象常用status和statusText两个属性。</li>
 </ul>
 <hr>
-<h3 id="get-post"><a href="#get-post" class="headerlink" title="$.get(), $.post()"></a>$.get(), $.post()</h3><hr>
+<h3 id="get-post"><a href="#get-post" class="headerlink" title="$.get(), $.post()"></a><code>$.get()</code>, <code>$.post()</code></h3><hr>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.get, post(URL, data, callback)</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>get以GET方法从服务器获取数据。</p>
@@ -663,7 +663,7 @@ $(selector).attr(&#123;
             <p>Author: <a href="http://endsieg77.github.io">Endsieg77</a>
             <p>Link: <a href="http://endsieg77.github.io/2021/01/19/stdjQuery/">http://endsieg77.github.io/2021/01/19/stdjQuery/</a>
             <p>Post on: <a href="http://endsieg77.github.io/2021/01/19/stdjQuery/">January 19th 2021, 1:27:31 am</a>
-            <p>Update on: <a href="http://endsieg77.github.io/2021/01/19/stdjQuery/">January 22nd 2021, 8:24:58 pm</a>
+            <p>Update on: <a href="http://endsieg77.github.io/2021/01/19/stdjQuery/">January 22nd 2021, 8:29:21 pm</a>
         </div>
     
     <!-- paginator  -->
