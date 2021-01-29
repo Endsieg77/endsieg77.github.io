@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://endsieg77.github.io/images/image-20210125073711079.png">
 <meta property="og:image" content="https://endsieg77.github.io/images/demo-struct.png">
 <meta property="article:published_time" content="2021-01-24T23:21:34.000Z">
-<meta property="article:modified_time" content="2021-01-25T00:52:23.102Z">
+<meta property="article:modified_time" content="2021-01-29T04:01:53.860Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="Warstory">
 <meta property="article:tag" content="WOC">
@@ -475,6 +475,41 @@ height:50vh;
 <p>定个小目标，今天弄成这样：</p>
 <p><img src="/images/demo-struct.png" alt=""></p>
 <p>过会就开工！</p>
+<hr>
+<h1 id="记录些东西"><a href="#记录些东西" class="headerlink" title="记录些东西"></a>记录些东西</h1><hr>
+<p>过会(指摸了三天然后通关了宝可梦再开始。</p>
+<p>我发现QT的examples里就有musicplayer的样例，非常好啊！</p>
+<p>准备先阅读一番。</p>
+<hr>
+<blockquote>
+<h2 id="QT-FORWARD-DECALARE-CLASS"><a href="#QT-FORWARD-DECALARE-CLASS" class="headerlink" title="QT_FORWARD_DECALARE_CLASS()"></a>QT_FORWARD_DECALARE_CLASS()</h2><p>一个QT的预处理宏，</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="meta">#<span class="meta-keyword">define</span>  QT_FORWARD_DECALARE_CLASS(name) class name</span></span><br></pre></td></tr></table></figure>
+<p>用来前向声明，避免不需要的include。</p>
+</blockquote>
+<hr>
+<blockquote>
+<h2 id="Q-PROPERTY-“property”-arg"><a href="#Q-PROPERTY-“property”-arg" class="headerlink" title="Q_PROPERTY(“property”, #arg)"></a>Q_PROPERTY(“property”, #arg)</h2><h2 id=""><a href="#" class="headerlink" title=""></a><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 对于一个属性volume，靠volume函数获取其值，靠setVolume改变其值，</span></span><br><span class="line"><span class="comment">   并且和槽函数volumeChanged连接 */</span></span><br><span class="line"> Q_PROPERTY(<span class="keyword">int</span> volume READ volume WRITE setVolume NOTIFY volumeChanged)</span><br></pre></td></tr></table></figure></h2><h2 id="QToolButton的PopupMode"><a href="#QToolButton的PopupMode" class="headerlink" title="QToolButton的PopupMode"></a>QToolButton的PopupMode</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/LaoYuanPython/p/11931605.html">链接</a></p>
+<p>一般分为三种：</p>
+<ul>
+<li>QToolButton::DelayedPopup 点击一定时间和单击立刻松开的效果有别。</li>
+<li>QToolButton::MenuButtonPopup 按钮上会有一个箭头指示有弹出菜单存在。</li>
+<li>QToolButton::InstantPopup 一经点击，立刻弹出。</li>
+</ul>
+</blockquote>
+<hr>
+<blockquote>
+<h2 id="QOverload-lt-gt-of"><a href="#QOverload-lt-gt-of" class="headerlink" title="QOverload&lt;&gt;::of()"></a>QOverload&lt;&gt;::of()</h2><p>当某函数有多个重载版本时，可以用该函数来指定调用哪个版本的重载函数。</p>
+<p>多用于信号槽的连接。</p>
+<p>例如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connect(slider, &amp;QAbstractSlider::valueChanged, label, QOverload&lt;<span class="keyword">int</span>&gt;::of(&amp;QLabel::setNum));</span><br></pre></td></tr></table></figure>
+<p>将Slider值改变的事件与setNum以int为参数的版本连接。</p>
+</blockquote>
+<hr>
+<blockquote>
+<h2 id="QBoxLayout"><a href="#QBoxLayout" class="headerlink" title="QBoxLayout"></a>QBoxLayout</h2><p>用于布局的类。</p>
+<p>其有两个子类。</p>
+<p>QHBoxLayout，用于水平方向布局。QVBoxLayout，用于竖直方向布局。 </p>
+</blockquote>
 
     </article>
     <!-- license  -->
@@ -483,7 +518,7 @@ height:50vh;
             <p>Author: <a href="https://endsieg77.github.io">Endsieg77</a>
             <p>Link: <a href="https://endsieg77.github.io/2021/01/25/C-%E7%BB%84WOC-QMediaPlayer/">https://endsieg77.github.io/2021/01/25/C-%E7%BB%84WOC-QMediaPlayer/</a>
             <p>Post on: <a href="https://endsieg77.github.io/2021/01/25/C-%E7%BB%84WOC-QMediaPlayer/">January 25th 2021, 7:21:34 am</a>
-            <p>Update on: <a href="https://endsieg77.github.io/2021/01/25/C-%E7%BB%84WOC-QMediaPlayer/">January 25th 2021, 8:52:23 am</a>
+            <p>Update on: <a href="https://endsieg77.github.io/2021/01/25/C-%E7%BB%84WOC-QMediaPlayer/">January 29th 2021, 12:01:53 pm</a>
         </div>
     
     <!-- paginator  -->
@@ -631,7 +666,13 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#One"><span class="toc-number">1.</span> <span class="toc-text">One</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#playerlist"><span class="toc-number">1.1.</span> <span class="toc-text">playerlist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mainwindow"><span class="toc-number">1.2.</span> <span class="toc-text">mainwindow</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#One"><span class="toc-number">1.</span> <span class="toc-text">One</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#playerlist"><span class="toc-number">1.1.</span> <span class="toc-text">playerlist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mainwindow"><span class="toc-number">1.2.</span> <span class="toc-text">mainwindow</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95%E4%BA%9B%E4%B8%9C%E8%A5%BF"><span class="toc-number">2.</span> <span class="toc-text">记录些东西</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#QT-FORWARD-DECALARE-CLASS"><span class="toc-number">2.1.</span> <span class="toc-text">QT_FORWARD_DECALARE_CLASS()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-PROPERTY-%E2%80%9Cproperty%E2%80%9D-arg"><span class="toc-number">2.2.</span> <span class="toc-text">Q_PROPERTY(“property”, #arg)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.3.</span> <span class="toc-text">1
+2
+3
+&#x2F;* 对于一个属性volume，靠volume函数获取其值，靠setVolume改变其值，
+   并且和槽函数volumeChanged连接 *&#x2F;
+ Q_PROPERTY(int volume READ volume WRITE setVolume NOTIFY volumeChanged)
+</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QToolButton%E7%9A%84PopupMode"><span class="toc-number">2.4.</span> <span class="toc-text">QToolButton的PopupMode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QOverload-lt-gt-of"><span class="toc-number">2.5.</span> <span class="toc-text">QOverload&lt;&gt;::of()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QBoxLayout"><span class="toc-number">2.6.</span> <span class="toc-text">QBoxLayout</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
