@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://endsieg77.github.io/images/image-20210125073711079.png">
 <meta property="og:image" content="https://endsieg77.github.io/images/demo-struct.png">
 <meta property="article:published_time" content="2021-01-24T23:21:34.000Z">
-<meta property="article:modified_time" content="2021-01-30T11:21:44.360Z">
+<meta property="article:modified_time" content="2021-02-03T13:12:37.099Z">
 <meta property="article:author" content="Endsieg77">
 <meta property="article:tag" content="Warstory">
 <meta property="article:tag" content="WOC">
@@ -561,6 +561,10 @@ height:50vh;
 <h2 id="set-icon-of-buttons"><a href="#set-icon-of-buttons" class="headerlink" title="set icon of buttons"></a>set icon of buttons</h2><p>btn-&gt;setIcon(QPixmap(“:/rsc/filename”))</p>
 </blockquote>
 <hr>
+<blockquote>
+<h2 id="Pass-parameters-from-signals-to-slots"><a href="#Pass-parameters-from-signals-to-slots" class="headerlink" title="Pass parameters from signals to slots"></a>Pass parameters from signals to slots</h2><p>信号函数的参数数量和类型注意要与槽函数的一致. 这个问题我也花了好久解决. 写这个QT真是踩一堆坑, 难受.</p>
+</blockquote>
+<hr>
 
     </article>
     <!-- license  -->
@@ -569,7 +573,7 @@ height:50vh;
             <p>Author: <a href="https://endsieg77.github.io">Endsieg77</a>
             <p>Link: <a href="https://endsieg77.github.io/2021/01/25/C-%E7%BB%84WOC-QMediaPlayer/">https://endsieg77.github.io/2021/01/25/C-%E7%BB%84WOC-QMediaPlayer/</a>
             <p>Post on: <a href="https://endsieg77.github.io/2021/01/25/C-%E7%BB%84WOC-QMediaPlayer/">January 25th 2021, 7:21:34 am</a>
-            <p>Update on: <a href="https://endsieg77.github.io/2021/01/25/C-%E7%BB%84WOC-QMediaPlayer/">January 30th 2021, 7:21:44 pm</a>
+            <p>Update on: <a href="https://endsieg77.github.io/2021/01/25/C-%E7%BB%84WOC-QMediaPlayer/">February 3rd 2021, 9:12:37 pm</a>
         </div>
     
     <!-- paginator  -->
@@ -717,7 +721,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#One"><span class="toc-number">1.</span> <span class="toc-text">One</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#playerlist"><span class="toc-number">1.1.</span> <span class="toc-text">playerlist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mainwindow"><span class="toc-number">1.2.</span> <span class="toc-text">mainwindow</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Two-%E8%AE%B0%E5%BD%95%E4%BA%9B%E4%B8%9C%E8%A5%BF"><span class="toc-number">2.</span> <span class="toc-text">Two 记录些东西</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#QT-FORWARD-DECALARE-CLASS"><span class="toc-number">2.1.</span> <span class="toc-text">QT_FORWARD_DECALARE_CLASS()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-PROPERTY-%E2%80%9Cproperty%E2%80%9D-arg"><span class="toc-number">2.2.</span> <span class="toc-text">Q_PROPERTY(“property”, #arg)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QToolButton%E7%9A%84PopupMode"><span class="toc-number">2.3.</span> <span class="toc-text">QToolButton的PopupMode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QOverload-lt-gt-of"><span class="toc-number">2.4.</span> <span class="toc-text">QOverload&lt;&gt;::of()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QBoxLayout"><span class="toc-number">2.5.</span> <span class="toc-text">QBoxLayout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QStandardPaths-standardLocations"><span class="toc-number">2.6.</span> <span class="toc-text">QStandardPaths::standardLocations()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QWidget-setToolTip-const-QString-amp"><span class="toc-number">2.7.</span> <span class="toc-text">QWidget::setToolTip(const QString&amp;)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Inside-Sample-Object-Tree"><span class="toc-number">2.8.</span> <span class="toc-text">Inside Sample Object Tree</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#set-icon-of-buttons"><span class="toc-number">2.9.</span> <span class="toc-text">set icon of buttons</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#One"><span class="toc-number">1.</span> <span class="toc-text">One</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#playerlist"><span class="toc-number">1.1.</span> <span class="toc-text">playerlist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mainwindow"><span class="toc-number">1.2.</span> <span class="toc-text">mainwindow</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Two-%E8%AE%B0%E5%BD%95%E4%BA%9B%E4%B8%9C%E8%A5%BF"><span class="toc-number">2.</span> <span class="toc-text">Two 记录些东西</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#QT-FORWARD-DECALARE-CLASS"><span class="toc-number">2.1.</span> <span class="toc-text">QT_FORWARD_DECALARE_CLASS()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-PROPERTY-%E2%80%9Cproperty%E2%80%9D-arg"><span class="toc-number">2.2.</span> <span class="toc-text">Q_PROPERTY(“property”, #arg)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QToolButton%E7%9A%84PopupMode"><span class="toc-number">2.3.</span> <span class="toc-text">QToolButton的PopupMode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QOverload-lt-gt-of"><span class="toc-number">2.4.</span> <span class="toc-text">QOverload&lt;&gt;::of()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QBoxLayout"><span class="toc-number">2.5.</span> <span class="toc-text">QBoxLayout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QStandardPaths-standardLocations"><span class="toc-number">2.6.</span> <span class="toc-text">QStandardPaths::standardLocations()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QWidget-setToolTip-const-QString-amp"><span class="toc-number">2.7.</span> <span class="toc-text">QWidget::setToolTip(const QString&amp;)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Inside-Sample-Object-Tree"><span class="toc-number">2.8.</span> <span class="toc-text">Inside Sample Object Tree</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#set-icon-of-buttons"><span class="toc-number">2.9.</span> <span class="toc-text">set icon of buttons</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pass-parameters-from-signals-to-slots"><span class="toc-number">2.10.</span> <span class="toc-text">Pass parameters from signals to slots</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
